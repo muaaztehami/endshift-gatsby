@@ -1,3 +1,35 @@
+// import React from 'react'
+// import { Link } from 'gatsby'
+
+// import Layout from "../components/layout"
+// import SEO from "../components/seo"
+
+// export default function Template({data}) {
+//   const post = data.markdownRemark
+
+//   return(
+//     <Layout>
+//       <SEO title="Page two" />
+//       <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
+//       <div dangerouslySetInnerHTML={{ __html: post.html }}/>
+//       <Link to="/blogs">Go Back</Link>
+//     </Layout>
+//   )
+// }
+
+// export const postQuery = graphql`
+  // query BlogPostByPath($path: String!) {
+  //   markdownRemark(frontmatter: { path: { eq: $path } }){
+  //     html
+  //     frontmatter {
+  //       title
+  //       author
+  //       date
+  //     }
+  //   }
+  // }
+// `
+
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -7,8 +39,8 @@ import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const siteTitle = post.frontmatter.title || `Title`
+  // const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -29,12 +61,13 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <Link to="/blogs">Go Back</Link>
         <hr />
         <footer>
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      {/* <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -59,7 +92,7 @@ const BlogPostTemplate = ({ data, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   )
 }
@@ -67,40 +100,13 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }){
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
+        author
+        date
       }
     }
   }
