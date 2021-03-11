@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `endshift`,
     author: {
       name: `Kyle Mathews`,
       summary: `who lives and works in San Francisco building useful things.`,
@@ -14,6 +14,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

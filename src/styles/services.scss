@@ -1,0 +1,43 @@
+.tags a{
+  color: black;
+  padding: 0 5px;
+  text-decoration: underline;
+}
+
+.flex-container-services {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.flex-container-services div.services-box {
+  border: none;
+  width: 47%;
+  // height: 315px;
+  // margin-top: 70px;
+  // margin-inline-end: 50px;
+}
+
+.flex-container div.card-services {
+  border: none;
+  width: 45%;
+  /* height: 300px; */
+  // margin-top: 70px;
+  // margin-inline-end: 50px;
+}
+
+.card-img-services {
+  background: transparent;
+  width: 100%;
+  height: 300px;
+}
+.big-container {
+  max-width: 80%;
+  margin: 150px 0;
+}
+
+.big-container-img {
+  background: transparent;
+  width: 100%;
+  height: 300px;
+}

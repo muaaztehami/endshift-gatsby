@@ -3,9 +3,14 @@ import { Link } from "gatsby"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import "jquery/dist/jquery.min.js"
+// import 'popper.js/dist/popper.min'
+import "bootstrap/dist/js/bootstrap.min.js"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
-import Header from "./header"
-import Menu from "./menu"
+import Header from "./header/header"
+import Footer from "./footer"
 // import "./layout.css"
 
 const Layout = ({ location, title, children }) => {
@@ -20,59 +25,15 @@ const Layout = ({ location, title, children }) => {
   `)
 
   return (
-    <>
+    <div>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Menu />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+
+      <div>
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-            // background: `#333`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
       </div>
-    </>
+      <Footer siteTitle={data.site.siteMetadata?.title || `Title`} />
+    </div>
   )
-  // const rootPath = `${__PATH_PREFIX__}/`
-  // const isRootPath = location.pathname === rootPath
-  // let header
-
-  // if (isRootPath) {
-  //   header = (
-  //     <h1 className="main-heading">
-  //       <Link to="/">{title}</Link>
-  //     </h1>
-  //   )
-  // } else {
-  //   header = (
-  //     <Link className="header-link-home" to="/">
-  //       {title}
-  //     </Link>
-  //   )
-  // }
-
-  // return (
-  //   <div className="global-wrapper" data-is-root-path={isRootPath}>
-  //     <header className="global-header">{header}</header>
-  //     <main>{children}</main>
-  //     <footer>
-  //       © {new Date().getFullYear()}, Built with
-  //       {` `}
-  //       <a href="https://www.gatsbyjs.com">Gatsby</a>
-  //     </footer>
-  //   </div>
-  // )
 }
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
