@@ -48,7 +48,6 @@ const MultiSlider = () => {
     <div class="slider-container">
       <Slider {...settings}>
         <div class="card">
-          {/* <img src={imgs} alt="slide-1" class="img" /> */}
           <Img
             fluid={data.slide01ql.childImageSharp.fluid}
             alt="slide-1"
@@ -61,7 +60,6 @@ const MultiSlider = () => {
             alt="slide-1"
             style={{ maxWidth: `100%`, maxHeight: `100%` }}
           />
-          {/* <img src={imgs1} alt="slide-2" class="img" /> */}
         </div>
         <div class="card">
           <Img
@@ -69,7 +67,6 @@ const MultiSlider = () => {
             alt="slide-1"
             style={{ maxWidth: `100%`, maxHeight: `100%` }}
           />
-          {/* <img src={imgs} alt="slide-3" class="img" /> */}
         </div>
         <div class="card">
           <Img
@@ -77,7 +74,6 @@ const MultiSlider = () => {
             alt="slide-1"
             style={{ maxWidth: `100%`, maxHeight: `100%` }}
           />
-          {/* <img src={imgs1} alt="slide-4" class="img" /> */}
         </div>
       </Slider>
     </div>

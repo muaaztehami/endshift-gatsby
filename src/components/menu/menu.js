@@ -55,7 +55,7 @@ const Menu = () => {
             <Link to="/careers">Careers</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact_us">Contact</Link>
           </li>
         </div>
       </div>

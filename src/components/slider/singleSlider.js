@@ -1,6 +1,4 @@
 import React from "react"
-// import imgs from "../../images/office.jpg"
-// import imgs1 from "../../images/office1.jpeg"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
@@ -51,7 +49,6 @@ const SingleSlider = () => {
             alt="slide-1"
             style={{ maxWidth: `100%`, maxHeight: `100%` }}
           />
-          {/* <img src={imgs} alt="slide-1" class="big-img" /> */}
         </div>
         <div class="big-card">
           <Img
@@ -79,22 +76,3 @@ const SingleSlider = () => {
   )
 }
 export default SingleSlider
-
-// export const query = graphql `
-//   query {
-//     slide01ql: file(relativePath: { eq: "office.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 1200) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     slide02ql: file(relativePath: { eq: "office1.jpeg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 1200) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `

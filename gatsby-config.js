@@ -14,6 +14,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     {
