@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   // const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const postTemplate = path.resolve('src/templates/blog-post.js')
+  const postTemplate = path.resolve("src/templates/blog-post.js")
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -27,15 +27,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     `
-  )
-  .then(res =>{
-    if(res.errors){
+  ).then(res => {
+    if (res.errors) {
       return Promise.reject(res.errors)
     }
-    res.data.allMarkdownRemark.edges.forEach(({node}) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: postTemplate
+        component: postTemplate,
       })
     })
   })
@@ -117,8 +116,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Frontmatter {
       title: String
-      description: String
       date: Date @dateformat
+      path: String
+      author: String
     }
 
     type Fields {

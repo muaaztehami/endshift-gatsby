@@ -1,8 +1,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "jquery/dist/jquery.min.js"
-import "bootstrap/dist/js/bootstrap.min.js"
+// import "jquery/dist/jquery.min.js"
+// import "bootstrap/dist/js/bootstrap.min.js"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
