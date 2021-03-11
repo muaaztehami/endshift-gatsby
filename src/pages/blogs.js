@@ -3,36 +3,12 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 // import imgs from "../images/card.jpg"
 import "../styles/blogs.scss"
 
-const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query BlogIndexQuery {
-      allMarkdownRemark {
-        edges {
-          node {
-            id
-            frontmatter {
-              path
-              title
-              date
-              author
-              cover_image {
-                childImageSharp {
-                  fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blogs" />
@@ -76,22 +52,29 @@ const BlogPage = () => {
   )
 }
 
-// export const pageQuery = graphql`
-//   query BlogIndexQuery {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             path
-//             title
-//             date
-//             author
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-
 export default BlogPage
+
+export const data = graphql`
+  query BlogIndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            title
+            date
+            author
+            cover_image {
+              childImageSharp {
+                fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
