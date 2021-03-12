@@ -9,7 +9,6 @@ import Img from "gatsby-image"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title || `Title`
-  // const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -18,28 +17,6 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      {/* <div class="small-container">
-        <div class="space-around">
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
-        </div>
-      </div> */}
-      {/* <div style={{ 
-          backgroundImage: "url(" + imgs + ")", 
-          width: `100%`, 
-          height: `400px`,
-          opacity: `0.5`,
-          backgroundRepeat: `no-repeat`,
-          backgroundSize: `100% 100%`,
-          textAlign: `center`,
-          padding: `10px 0`
-        }}>
-        <div class="small-container">
-          <h1 class="extra-larg-text bold-text">{post.frontmatter.title}</h1>
-        </div>
-      </div> */}
       <div
         style={{ width: `100%`, height: `400px`, position: `relative` }}
         class="space-around"
@@ -68,10 +45,6 @@ const BlogPostTemplate = ({ data, location }) => {
             itemScope
             itemType="http://schema.org/Article"
           >
-            {/* <header>
-              <h1 itemProp="headline">{post.frontmatter.title}</h1>
-              <p>{post.frontmatter.date}</p>
-            </header> */}
             <section
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"

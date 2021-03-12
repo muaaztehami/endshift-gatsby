@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import MultiSlider from "../components/slider/multiSlider"
-import SingleSlider from "../components/slider/singleSlider"
+import AboutSlider from "../components/slider/aboutSlider"
+import AuthorsSlider from "../components/slider/authorsSlider"
+import MainSlider from "../components/slider/mainSlider"
 import imgs from "../images/sideimg.jpeg"
 import svgs from "../images/ibm.svg"
 import "../styles/about.scss"
 
+export const aboutSlider = () => {}
 const AboutPage = () => {
   return (
     <Layout>
@@ -25,7 +27,7 @@ const AboutPage = () => {
 
       <div style={{ backgroundColor: `black`, padding: `100px 0px` }}>
         <div>
-          <MultiSlider />
+          <AboutSlider />
         </div>
       </div>
 
@@ -142,7 +144,7 @@ const AboutPage = () => {
       </div>
 
       <div style={{ padding: `100px 0px` }}>
-        <SingleSlider />
+        <MainSlider />
       </div>
 
       <div class="small-container">
@@ -192,7 +194,7 @@ const AboutPage = () => {
           <hr />
         </div>
         <div>
-          <MultiSlider />
+          <AuthorsSlider />
         </div>
       </div>
     </Layout>

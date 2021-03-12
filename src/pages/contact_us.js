@@ -1,12 +1,9 @@
 import React from "react"
-// import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/contact_us.scss"
-// import imgs from "../images/office1.jpeg"
 import TextField from "@material-ui/core/TextField"
 import { makeStyles } from "@material-ui/core/styles"
 

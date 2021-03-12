@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-// import imgs from "../images/card.jpg"
 import "../styles/blogs.scss"
 
 const BlogPage = ({ data }) => {
@@ -29,7 +28,6 @@ const BlogPage = ({ data }) => {
             <div key={post.node.id} class="blog-card">
               <Link to={post.node.frontmatter.path} class="blog-link">
                 <div class="blog-card-image">
-                  {/* <img src={imgs} alt="Blog" class="img" /> */}
                   <Img
                     fluid={
                       post.node.frontmatter.cover_image.childImageSharp.fluid
@@ -39,10 +37,7 @@ const BlogPage = ({ data }) => {
                   />
                 </div>
                 <p class="bold-text">{post.node.frontmatter.title}</p>
-                <small>
-                  {/* Posted by{post.node.frontmatter.author} on{" "} */}
-                  {post.node.frontmatter.date}
-                </small>
+                <small>{post.node.frontmatter.date}</small>
               </Link>
             </div>
           ))}
@@ -56,7 +51,9 @@ export default BlogPage
 
 export const data = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(content/blog)/" } }
+    ) {
       edges {
         node {
           id

@@ -1,15 +1,9 @@
-// import "bootstrap/dist/css/bootstrap.min.css"
-// import $ from "jquery"
-// import Popper from "popper.js"
-// import "bootstrap/dist/js/bootstrap.bundle.min"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Image from "../components/image"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-
-// import imgs from "../images/card.jpg"
+import BlogsSlider from "../components/slider/blogsSlider"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -67,7 +61,6 @@ const IndexPage = ({ data }) => (
       <div class="flex-container space-around">
         <div class="card">
           <div class="card-image">
-            {/* <img src={imgs} alt="Card" class="img" /> */}
             <Img
               fluid={data.card_image.childImageSharp.fluid}
               alt="slide-1"
@@ -80,7 +73,6 @@ const IndexPage = ({ data }) => (
 
         <div class="card">
           <div class="card-image">
-            {/* <img src={imgs} alt="Card" class="img" /> */}
             <Img
               fluid={data.card_image.childImageSharp.fluid}
               alt="slide-1"
@@ -93,7 +85,6 @@ const IndexPage = ({ data }) => (
 
         <div class="card">
           <div class="card-image">
-            {/* <img src={imgs} alt="Card" class="img" /> */}
             <Img
               fluid={data.card_image.childImageSharp.fluid}
               alt="slide-1"
@@ -106,7 +97,6 @@ const IndexPage = ({ data }) => (
 
         <div class="card">
           <div class="card-image">
-            {/* <img src={imgs} alt="Card" class="img" /> */}
             <Img
               fluid={data.card_image.childImageSharp.fluid}
               alt="slide-1"
@@ -157,6 +147,9 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
+    <div>
+      <BlogsSlider />
+    </div>
   </Layout>
 )
 
@@ -180,26 +173,3 @@ export const data = graphql`
     }
   }
 `
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       nodes {
-//         excerpt
-//         fields {
-//           slug
-//         }
-//         frontmatter {
-//           date(formatString: "MMMM DD, YYYY")
-//           title
-//           description
-//         }
-//       }
-//     }
-//   }
-// `
