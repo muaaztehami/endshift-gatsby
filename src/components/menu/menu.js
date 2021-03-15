@@ -42,21 +42,23 @@ const Menu = () => {
           &times;
         </a>
         <div class="overlay-content">
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/news">News</Link>
-          </li>
-          <li>
-            <Link to="/careers">Careers</Link>
-          </li>
-          <li>
-            <Link to="/contact_us">Contact</Link>
-          </li>
+          <ul>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/news">News</Link>
+            </li>
+            <li>
+              <Link to="/careers">Careers</Link>
+            </li>
+            <li>
+              <Link to="/contact_us">Contact</Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div style={{ display: `flex`, float: `right` }}>

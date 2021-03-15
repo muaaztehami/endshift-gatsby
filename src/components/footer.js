@@ -10,10 +10,12 @@ const Footer = ({ siteTitle }) => (
     }}
   >
     <div class="footer small-container">
-      <h5
+      <h1
         style={{
           padding: `100px 0px`,
           margin: `0`,
+          fontSize: `20px`,
+          fontWeight: `bold`,
         }}
       >
         <Link
@@ -25,7 +27,7 @@ const Footer = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h5>
+      </h1>
       <small class="small-text">Get in touch</small>
       <div class="large-text bold-text">Don't be shy, say hi.</div>
       <div class="flex-container">

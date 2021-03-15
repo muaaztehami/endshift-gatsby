@@ -7,7 +7,7 @@ import BlogsSlider from "../components/slider/blogsSlider"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />/
+    <SEO title="Home" />
     <div class="small-container">
       <div class="space-around">
         <small class="small-text">WE ARE ENDSHIFT</small>
@@ -26,7 +26,6 @@ const IndexPage = ({ data }) => (
         class="space-around"
         style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}
       >
-        {/* <Image /> */}
         <Img
           fluid={data.home_banner.childImageSharp.fluid}
           alt="slide-1"

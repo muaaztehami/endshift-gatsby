@@ -21,8 +21,8 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container bold-text">
-        <div class="large-text">Our Craft & Expertise</div>
+      <div class="small-container ">
+        <div class="large-text bold-text">Our Craft & Expertise</div>
         <hr />
         <div class="flex-container-services">
           <div class="services-box">
