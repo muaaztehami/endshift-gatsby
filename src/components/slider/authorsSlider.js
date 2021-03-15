@@ -34,7 +34,7 @@ const AuthorsSlider = () => {
               designation
               slide_image {
                 childImageSharp {
-                  fluid(fit: FILL, maxWidth: 2000, maxHeight: 2000) {
+                  fluid(fit: FILL, maxWidth: 800, maxHeight: 1000) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -53,7 +53,7 @@ const AuthorsSlider = () => {
         {data.allMarkdownRemark.edges.map(slide => (
           <div class="card" key={slide.node.id}>
             <div class="card-image">
-              <div style={{ height: `300px` }}>
+              <div style={{ height: `fit-content` }}>
                 <Img
                   fluid={
                     slide.node.frontmatter.slide_image.childImageSharp.fluid
