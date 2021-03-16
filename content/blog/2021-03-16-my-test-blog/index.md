@@ -6,4 +6,4 @@ cover_image: office.jpg
 ---
 this is my blog's description.
 
-![alt](office.jpg "title")
+![alt](office.jpg)

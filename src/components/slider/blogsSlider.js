@@ -28,8 +28,10 @@ const BlogsSlider = () => {
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
-              path
               title
               date
               author
@@ -52,7 +54,7 @@ const BlogsSlider = () => {
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
           <div key={slide.node.id} class="card">
-            <Link to={slide.node.frontmatter.path} class="blog-link">
+            <Link to={slide.node.fields.slug} class="blog-link">
               <div class="blog-card-image">
                 <Img
                   fluid={

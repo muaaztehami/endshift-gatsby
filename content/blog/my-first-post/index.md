@@ -1,5 +1,4 @@
 ---
-path: "/post-two"
 date: "2020-10-11"
 title: "Explore A Partnership with Furrion to Redefine Its Vision for Tomorrow Case Study"
 author: "Author 1"
