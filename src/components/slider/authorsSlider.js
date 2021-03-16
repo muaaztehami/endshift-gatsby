@@ -40,7 +40,6 @@ const AuthorsSlider = () => {
                 }
               }
             }
-            excerpt
           }
         }
       }

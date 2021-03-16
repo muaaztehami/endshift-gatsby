@@ -1,4 +1,5 @@
 ---
+path: "/new-blog-2"
 title: new-blog-2
 date: 2021-03-16T07:18:28.184Z
 author: new auth

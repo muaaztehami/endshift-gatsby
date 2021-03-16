@@ -1,4 +1,5 @@
 ---
+path: "test-1"
 title: "test 1 "
 date: 2021-03-16T09:02:12.681Z
 author: test auth

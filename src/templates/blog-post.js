@@ -49,6 +49,7 @@ const BlogPostTemplate = ({ data, location }) => {
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
             />
+            {/* <p>{post.frontmatter.excerpt}</p> */}
             <Link to="/blogs">Go Back</Link>
             <hr />
             <footer>
