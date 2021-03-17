@@ -2,8 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/services.scss"
+import "../styles/careers.scss"
 import CareersSlider from "../components/slider/careersSlider"
 import MainSlider from "../components/slider/mainSlider"
+import { graphql, Link } from "gatsby"
 
 const CareersPage = ({ data }) => {
   return (
@@ -72,7 +74,7 @@ const CareersPage = ({ data }) => {
         }}
       >
         <div class="small-container">
-          <div class="large-text bold-text">
+          <div class="large-text bold-text" style={{ width: `40%` }}>
             Do great work in a strong culture
           </div>
           <hr />
@@ -150,6 +152,62 @@ const CareersPage = ({ data }) => {
         </div>
       </div>
 
+      <div class="small-container">
+        <div class="space-around">
+          <div class="large-text bold-text">
+            Strategists, innovators, storytellers
+          </div>
+        </div>
+        <hr />
+        <div class="flex-container">
+          <div class="box">
+            <button type="button" class="btn btn-light btn-align">
+              Learn more
+            </button>
+          </div>
+          <div class="box">
+            <small>
+              Great work has a purpose, it solves a problem, it creates
+              wrapperStyle for people to connect. If it wins awards or if other
+              people think it's cool then that's nice, we guess, but that's not
+              why we do it. We do it because it has impact, it helps someone, it
+              makes their lives easier or just more fun.
+            </small>
+          </div>
+        </div>
+
+        <div class="flex-container-services">
+          <div style={{ width: `52%` }}>
+            {data.allMarkdownRemark.edges.map((jobs, index) => (
+              <Link to="#" class="jobs-link">
+                <div class="flex-container space-around" key={jobs.node.id}>
+                  <div style={{ width: `10%` }}>
+                    {index + 1 < 10 && "0"}
+                    {index + 1}
+                  </div>
+                  <div style={{ width: `90%` }}>
+                    <div>
+                      <p
+                        class="bold-text"
+                        style={{ float: `left`, marginBottom: 0, width: `70%` }}
+                      >
+                        {jobs.node.frontmatter.title}
+                      </p>
+                      <small class="bold-text" style={{ float: `right` }}>
+                        {jobs.node.frontmatter.nature}
+                      </small>
+                    </div>
+                    <div style={{ clear: `both` }}>
+                      <small>{jobs.node.frontmatter.tagline}</small>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div class="small-container bold-text">
         <div class="large-text">Need Interactive Services?</div>
         <hr class="space-around" />
@@ -162,3 +220,20 @@ const CareersPage = ({ data }) => {
 }
 
 export default CareersPage
+
+export const data = graphql`
+  query JobsQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(jobs)/" } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            nature
+            tagline
+          }
+        }
+      }
+    }
+  }
+`

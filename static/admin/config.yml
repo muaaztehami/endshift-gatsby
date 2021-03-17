@@ -85,3 +85,21 @@ collections:
       preview: false
     fields:
       - { label: 'Slide Image', name: 'slide_image', widget: 'image' }
+
+  - name: 'jobs'
+    label: 'Jobs'
+    folder: 'content/jobs'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Nature', name: 'nature', widget: 'select', options: ["Full-time Position", "Internship"] }
+      - { label: 'Tagline', name: 'tagline', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
