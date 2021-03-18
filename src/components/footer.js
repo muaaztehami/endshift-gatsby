@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+// import Address from "./address"
+import Socials from "./socials"
 
 const Footer = ({ siteTitle }) => (
   <div
@@ -30,7 +32,7 @@ const Footer = ({ siteTitle }) => (
       </h1>
       <small class="small-text">Get in touch</small>
       <div class="large-text bold-text">Don't be shy, say hi.</div>
-      <div class="flex-container">
+      <div class="flex-container footer">
         <div class="footer">
           <small>Work with us</small>
           <br />
@@ -51,6 +53,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>+1.858.755.6922</small>
         </div>
+
         <div class="footer">
           <small>Location</small>
           <br />
@@ -64,11 +67,82 @@ const Footer = ({ siteTitle }) => (
         <div class="footer">
           <small>Sites</small>
           <br />
+          <small>
+            <Link
+              to="#"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              Our Work
+            </Link>
+          </small>
+          <br />
+          <small>
+            <Link
+              to="#"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              What We Do
+            </Link>
+          </small>
+          <br />
+          <small>
+            <Link
+              to="about"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              About
+            </Link>
+          </small>
+          <br />
+          <small>
+            <Link
+              to="#"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              News
+            </Link>
+          </small>
+          <br />
+          <small>
+            <Link
+              to="careers"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              Careers
+            </Link>
+          </small>
+          <br />
+          <small>
+            <Link
+              to="blogs"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              Blogs
+            </Link>
+          </small>
         </div>
         <div class="footer">
-          <small>Social</small>
-          <br />
+          <Socials />
         </div>
+
         <div class="footer" style={{ color: `#808080` }}>
           <small>©2020 ENDSHIFT IO.</small>
           <br />

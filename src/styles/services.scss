@@ -8,15 +8,13 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  div.services-box {
+    border: none;
+    width: 47%;
+    
+  }
 }
 
-.flex-container-services div.services-box {
-  border: none;
-  width: 47%;
-  // height: 315px;
-  // margin-top: 70px;
-  // margin-inline-end: 50px;
-}
 
 .flex-container div.card-services {
   border: none;

@@ -71,10 +71,7 @@ const CareersSlider = () => {
         {data.allMarkdownRemark.edges.map(slide => (
           <div class="card " key={slide.node.id}>
             <div class="flex-container-slider">
-              <div
-                class="card-careers"
-                style={{ width: `26%`, marginTop: `70px` }}
-              >
+              <div style={{ width: `26%`, marginTop: `70px` }}>
                 <div style={{ marginBottom: `20px` }}>
                   <Img
                     fluid={
@@ -94,7 +91,7 @@ const CareersSlider = () => {
                   />
                 </div>
               </div>
-              <div class="card-careers" style={{ width: `37%` }}>
+              <div style={{ width: `37%` }}>
                 <Img
                   fluid={
                     slide.node.frontmatter.slide_image_3.childImageSharp.fluid
@@ -103,10 +100,7 @@ const CareersSlider = () => {
                   style={{ maxWidth: `100%`, maxHeight: `100%` }}
                 />
               </div>
-              <div
-                class="card-careers"
-                style={{ width: `26%`, marginTop: `40px` }}
-              >
+              <div style={{ width: `26%`, marginTop: `40px` }}>
                 <Img
                   fluid={
                     slide.node.frontmatter.slide_image_4.childImageSharp.fluid

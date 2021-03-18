@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
         <div class="flex-container">
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} class="blog-card">
-              <Link to={post.node.fields.slug} class="blog-link">
+              <Link to={post.node.fields.slug} class="link-style">
                 <div class="blog-card-image">
                   <Img
                     fluid={

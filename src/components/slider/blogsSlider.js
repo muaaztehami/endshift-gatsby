@@ -54,7 +54,7 @@ const BlogsSlider = () => {
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
           <div key={slide.node.id} class="card">
-            <Link to={slide.node.fields.slug} class="blog-link">
+            <Link to={slide.node.fields.slug} class="link-style">
               <div class="blog-card-image">
                 <Img
                   fluid={

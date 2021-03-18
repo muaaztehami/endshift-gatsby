@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/services.scss"
-import "../styles/careers.scss"
+// import "../styles/careers.scss"
 import CareersSlider from "../components/slider/careersSlider"
 import MainSlider from "../components/slider/mainSlider"
 import { graphql, Link } from "gatsby"
@@ -179,7 +179,7 @@ const CareersPage = ({ data }) => {
         <div class="flex-container-services">
           <div style={{ width: `52%` }}>
             {data.allMarkdownRemark.edges.map((jobs, index) => (
-              <Link to="#" class="jobs-link">
+              <Link to="#" class="link-style">
                 <div class="flex-container space-around" key={jobs.node.id}>
                   <div style={{ width: `10%` }}>
                     {index + 1 < 10 && "0"}

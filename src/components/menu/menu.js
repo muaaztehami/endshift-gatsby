@@ -1,48 +1,37 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./style.scss"
 import { Link } from "gatsby"
+import Socials from "../socials"
 
-// import styled from "styled-components"
+const Menu = ({ changeHeader }) => {
+  const [menuState, setMenuState] = useState("close")
+  const menuRef = React.useRef()
+  menuRef.current = menuState
 
-// const MenuIcon = styled.button`
-//   display: flex;
-//   float: right;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   width: 1.5rem;
-//   height: 1.5rem;
-//   background: transparent;
-//   border: none;
-//   cursor: pointer;
-//   z-index: 5;
-
-//   div {
-//     width: 1.5rem;
-//     height: 0.2rem;import { Link } from "gatsby"
-
-//     background: black;
-//     border-radius: 5px;
-//     transform-origin: 1px;
-//     position: relative;
-//   }
-// `
-
-const Menu = () => {
   function openNav() {
-    document.getElementById("myNav").style.height = "100%"
+    document.getElementById("myNav").style.height = "91%"
+    setMenuState("open")
+    changeHeader.changeHeader("dark-header")
   }
 
   function closeNav() {
     document.getElementById("myNav").style.height = "0%"
+    setMenuState("close")
+    changeHeader.changeHeader("solid-header")
   }
   return (
     <div>
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>
-          &times;
-        </a>
-        <div class="overlay-content">
-          <ul>
+      <div id="myNav" class="overlay flex-container">
+        <div
+          class="menu-side-box"
+          style={{ width: `50%`, alignSelf: `flex-end` }}
+        >
+          <div class="footer" style={{ margin: `0 0 30px 50px` }}>
+            <Socials />
+          </div>
+        </div>
+        <div class="overlay-content big-items menu-mid-box">
+          <ul style={{ listStyleType: `none` }}>
             <li>
               <Link to="/about">About</Link>
             </li>
@@ -60,10 +49,31 @@ const Menu = () => {
             </li>
           </ul>
         </div>
+        <div
+          class="menu-side-box"
+          style={{ width: `20%`, alignSelf: `flex-end`, textAlign: `end` }}
+        >
+          <div
+            class="footer"
+            style={{ marginBottom: `30px`, marginLeft: `auto` }}
+          >
+            <small>Location</small>
+            <br />
+            <small>
+              San Diego -- 845 15th Street, Suite 501 San Diego, CA 92101
+            </small>
+            <br />
+            <br />
+            <small>The Bay Area -- Location Undisclosed</small>
+          </div>
+        </div>
       </div>
       <div style={{ display: `flex`, float: `right` }}>
         <small style={{ padding: `7px` }}>LET'S TALK</small>
-        <span style={{ fontSize: `23px`, cursor: `pointer` }} onClick={openNav}>
+        <span
+          style={{ fontSize: `23px`, cursor: `pointer` }}
+          onClick={menuRef.current == "close" ? openNav : closeNav}
+        >
           &#9776;
         </span>
       </div>

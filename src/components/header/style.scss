@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 70px;
+  padding: 20px;
+  z-index: 5;
+}
+.transparent-header {
+  background-color: transparent;
+  color: black;
+}
+
+.solid-header {
+  background-color: white;
+  color: black;
+}
+
+.dark-header {
+  background-color: black;
+  color: white;
+}

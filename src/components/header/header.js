@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import Menu from "../menu/menu"
+import "./style.scss"
 
 const Header = ({ siteTitle }) => {
   const [headerBackground, setHeaderBackground] = useState("transparent-header")
@@ -22,10 +23,13 @@ const Header = ({ siteTitle }) => {
       document.removeEventListener("scroll", handleScroll)
     }
   }, [])
+  const changeHeader = headerStyle => {
+    setHeaderBackground(headerStyle)
+  }
   return (
-    <div className={headerRef.current}>
+    <div className={`${headerRef.current} header`}>
       <div>
-        <Menu />
+        <Menu changeHeader={{ changeHeader }} />
         <h1
           style={{
             margin: 0,
@@ -36,7 +40,7 @@ const Header = ({ siteTitle }) => {
           <Link
             to="/"
             style={{
-              color: `black`,
+              // color: `black`,
               textDecoration: `none`,
             }}
           >
