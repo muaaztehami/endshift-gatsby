@@ -9,7 +9,7 @@ const ServicesPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Services" />
-      <div class="small-container">
+      <div class="small-container top-container">
         <div class="space-around">
           <small class="small-text">OUR SERVICES</small>
           <h1 class="extra-larg-text bold-text">Our Craft & Expertise</h1>
@@ -22,7 +22,9 @@ const ServicesPage = ({ data }) => {
       </div>
 
       <div class="small-container ">
-        <div class="large-text bold-text">Our Craft & Expertise</div>
+        <div class="large-text bold-text mdeium-text-box">
+          Our Craft & Expertise
+        </div>
         <hr />
         <div class="flex-container-services">
           <div class="services-box">

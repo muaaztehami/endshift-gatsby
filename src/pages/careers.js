@@ -11,7 +11,7 @@ const CareersPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Services" />
-      <div class="small-container">
+      <div class="small-container top-container">
         <div class="space-around">
           <small class="small-text">CAREERS</small>
           <h1 class="extra-larg-text bold-text">We're all in this together</h1>
@@ -28,7 +28,7 @@ const CareersPage = ({ data }) => {
       </div>
 
       <div class="small-container ">
-        <div class="large-text bold-text">Do great work</div>
+        <div class="large-text bold-text mdeium-text-box">Do great work</div>
         <hr />
         <div class="flex-container-services">
           <div class="services-box">
@@ -74,7 +74,7 @@ const CareersPage = ({ data }) => {
         }}
       >
         <div class="small-container">
-          <div class="large-text bold-text" style={{ width: `40%` }}>
+          <div class="large-text bold-text mdeium-text-box">
             Do great work in a strong culture
           </div>
           <hr />
@@ -208,8 +208,8 @@ const CareersPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container bold-text">
-        <div class="large-text">Need Interactive Services?</div>
+      <div class="small-container">
+        <div class="large-text bold-text">Need Interactive Services?</div>
         <hr class="space-around" />
         <button type="button" class="btn btn-light btn-align">
           Let's chat about your needs.

@@ -37,7 +37,7 @@ const BlogsSlider = () => {
               author
               cover_image {
                 childImageSharp {
-                  fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
+                  fluid(fit: FILL, maxWidth: 1600, maxHeight: 1000) {
                     ...GatsbyImageSharpFluid
                   }
                 }

@@ -8,7 +8,7 @@ import BlogsSlider from "../components/slider/blogsSlider"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <div class="small-container">
+    <div class="small-container top-container">
       <div class="space-around">
         <small class="small-text">WE ARE ENDSHIFT</small>
         <h1 class="extra-larg-text bold-text">Solutions by design</h1>
@@ -22,19 +22,20 @@ const IndexPage = ({ data }) => (
           Contact us
         </button>
       </div>
-      <div
-        class="space-around"
-        style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}
-      >
+    </div>
+    <div class="small-container full-image" style={{ marginTop: `0` }}>
+      <div style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}>
         <Img
           fluid={data.home_banner.childImageSharp.fluid}
           alt="slide-1"
           style={{ maxWidth: `100%`, maxHeight: `100%` }}
         />
       </div>
+    </div>
+    <div class="small-container">
       <div class="space-around">
         <small class="small-text">WHAT WE DO</small>
-        <div class="large-text bold-text" style={{ width: `40%` }}>
+        <div class="large-text bold-text mdeium-text-box">
           Let's Build Something Great. Together.
         </div>
       </div>
@@ -114,7 +115,7 @@ const IndexPage = ({ data }) => (
       <div class="small-container footer" style={{ marginTop: 0 }}>
         <div>
           <small class="small-text">WHAT WE DO</small>
-          <div class="large-text bold-text" style={{ width: `40%` }}>
+          <div class="large-text bold-text mdeium-text-box">
             From the Inside Out.
           </div>
         </div>
@@ -141,7 +142,7 @@ const IndexPage = ({ data }) => (
     <div class="small-container">
       <div>
         <small class="small-text">NEWS + VIEWS</small>
-        <div class="large-text bold-text" style={{ width: `40%` }}>
+        <div class="large-text bold-text mdeium-text-box">
           Recent agency happenings, press.
         </div>
       </div>

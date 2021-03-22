@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./style.scss"
 import { Link } from "gatsby"
-import Socials from "../socials"
+import Socials from "../socials/socials"
 
 const Menu = ({ changeHeader }) => {
   const [menuState, setMenuState] = useState("close")
@@ -21,12 +21,9 @@ const Menu = ({ changeHeader }) => {
   }
   return (
     <div>
-      <div id="myNav" class="overlay flex-container">
-        <div
-          class="menu-side-box"
-          style={{ width: `50%`, alignSelf: `flex-end` }}
-        >
-          <div class="footer" style={{ margin: `0 0 30px 50px` }}>
+      <div id="myNav" class="overlay menu-flex-container">
+        <div class="menu-left-box">
+          <div class="menu">
             <Socials />
           </div>
         </div>
@@ -49,13 +46,10 @@ const Menu = ({ changeHeader }) => {
             </li>
           </ul>
         </div>
-        <div
-          class="menu-side-box"
-          style={{ width: `20%`, alignSelf: `flex-end`, textAlign: `end` }}
-        >
+        <div class="menu-right-box">
           <div
-            class="footer"
-            style={{ marginBottom: `30px`, marginLeft: `auto` }}
+            class="menu"
+            // style={{ marginBottom: `30px`, marginLeft: `auto` }}
           >
             <small>Location</small>
             <br />
@@ -69,7 +63,9 @@ const Menu = ({ changeHeader }) => {
         </div>
       </div>
       <div style={{ display: `flex`, float: `right` }}>
-        <small style={{ padding: `7px` }}>LET'S TALK</small>
+        <small class="hide" style={{ padding: `7px` }}>
+          LET'S TALK
+        </small>
         <span
           style={{ fontSize: `23px`, cursor: `pointer` }}
           onClick={menuRef.current == "close" ? openNav : closeNav}

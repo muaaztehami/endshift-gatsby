@@ -20,7 +20,7 @@ const ContactUsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Services" />
-      <div class="small-container">
+      <div class="small-container top-container">
         <div class="space-around">
           <small class="small-text">CONTACT US</small>
           <h1 class="extra-larg-text bold-text">Let's Chat</h1>

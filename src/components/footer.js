@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-// import Address from "./address"
-import Socials from "./socials"
+import Socials from "./socials/socials"
 
 const Footer = ({ siteTitle }) => (
   <div
@@ -64,7 +63,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>The Bay Area -- Location Undisclosed</small>
         </div>
-        <div class="footer">
+        <div class="footer sites">
           <small>Sites</small>
           <br />
           <small>
@@ -139,7 +138,7 @@ const Footer = ({ siteTitle }) => (
             </Link>
           </small>
         </div>
-        <div class="footer">
+        <div class="footer socials">
           <Socials />
         </div>
 

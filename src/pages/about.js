@@ -4,16 +4,17 @@ import SEO from "../components/seo"
 import AboutSlider from "../components/slider/aboutSlider"
 import AuthorsSlider from "../components/slider/authorsSlider"
 import MainSlider from "../components/slider/mainSlider"
-import imgs from "../images/sideimg.jpeg"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import svgs from "../images/ibm.svg"
 import "../styles/about.scss"
 
 export const aboutSlider = () => {}
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <div class="small-container">
+      <div class="small-container top-container">
         <div class="space-around">
           <small class="small-text">OUR STORY</small>
           <h1 class="extra-larg-text bold-text">The Story of Us</h1>
@@ -45,18 +46,25 @@ const AboutPage = () => {
 
       <div class="small-container">
         <div class="space-around">
-          <div class="large-text bold-text" style={{ width: `40%` }}>
-            What We Do
-          </div>
+          <div class="large-text bold-text mdeium-text-box">What We Do</div>
           <hr />
         </div>
       </div>
 
       <div class="medium-container flex-container">
-        <div class="medium-container-box">
-          <img src={imgs} alt="side-img" class="img side-image" />
+        <div class="box" style={{ alignSelf: `flex-end` }}>
+          <div style={{ height: `60%` }}>
+            <Img
+              fluid={data.sideimg.childImageSharp.fluid}
+              alt="slide-1"
+              style={{
+                width: `100%`,
+                height: `100%`,
+              }}
+            />
+          </div>
         </div>
-        <div class="medium-container-box">
+        <div class="box">
           <div class="top-box">
             <p class="bold-text">We dont't design in a vacuum.</p>
             <small>
@@ -128,15 +136,15 @@ const AboutPage = () => {
 
       <div class="small-container">
         <div class="space-around flex-container">
-          <div>
+          <div class="small-box">
             <p>People</p>
             <p class="extra-larg-text bold-text">50</p>
           </div>
-          <div>
+          <div class="small-box">
             <p>Projects</p>
             <p class="extra-larg-text bold-text">500+</p>
           </div>
-          <div>
+          <div class="small-box">
             <p>Founded in</p>
             <p class="extra-larg-text bold-text">2009+</p>
           </div>
@@ -148,9 +156,7 @@ const AboutPage = () => {
       </div>
 
       <div class="small-container">
-        <div class="large-text bold-text" style={{ width: `40%` }}>
-          Our Clients
-        </div>
+        <div class="large-text bold-text mdeium-text-box">Our Clients</div>
         <hr />
         <div class="flex-container">
           <div class="svg-container">
@@ -188,9 +194,7 @@ const AboutPage = () => {
 
       <div>
         <div class="small-container">
-          <div class="large-text bold-text" style={{ width: `40%` }}>
-            Not Just Some Pretty Faces
-          </div>
+          <div class="large-text bold-text">Not Just Some Pretty Faces</div>
           <hr />
         </div>
         <div>
@@ -201,3 +205,15 @@ const AboutPage = () => {
   )
 }
 export default AboutPage
+
+export const data = graphql`
+  query {
+    sideimg: file(relativePath: { eq: "sideimg.jpeg" }) {
+      childImageSharp {
+        fluid(fit: FILL, maxWidth: 600, maxHeight: 780) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

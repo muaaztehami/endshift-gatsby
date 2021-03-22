@@ -1,9 +1,7 @@
 .medium-container {
   max-width: 80%;
   margin-right: auto;
-  /* position: relative; */
-  /* padding: 0 1.0875rem 1.45rem; */
-
+  @media screen and (max-width: 480px) {margin: auto;}
 }
 
 .top-box {
@@ -16,17 +14,17 @@
 
 .side-image {
   width: fit-content;
-  position: absolute;
   bottom: 0;
   left: 0;
   height: 65% !important;
 }
 
-.flex-container div.medium-container-box {
-  width: 45%;
-  position: relative;
-}
+.flex-container div.small-box {
 
+  width: 33.33%;
+  @media screen and (max-width: 480px) {width: 100%;}
+
+}
 .svg-container {
   width: 100px;
   height: 100px;

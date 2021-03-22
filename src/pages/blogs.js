@@ -11,7 +11,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blogs" />
-      <div class="small-container">
+      <div class="small-container top-container">
         <div class="space-around">
           <small class="small-text">BLOGS</small>
           <h1 class="extra-larg-text bold-text">Newsworthy Client Wins</h1>

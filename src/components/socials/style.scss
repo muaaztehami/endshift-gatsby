@@ -1,0 +1,9 @@
+.socials-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  small{
+    margin: 4px;
+  }
+}

@@ -29,7 +29,7 @@ const CaseStudyPage = ({ data }) => (
     </div>
 
     <div class="small-container ">
-      <div class="large-text bold-text">The Challenge</div>
+      <div class="large-text bold-text mdeium-text-box">The Challenge</div>
       <hr />
       <div class="flex-container-services">
         <div class="services-box">
@@ -59,7 +59,7 @@ const CaseStudyPage = ({ data }) => (
     </div>
 
     <div class="small-container ">
-      <div class="large-text bold-text">Our Approach</div>
+      <div class="large-text bold-text mdeium-text-box">Our Approach</div>
       <hr />
       <div class="flex-container-services">
         <div class="services-box">
@@ -85,7 +85,7 @@ const CaseStudyPage = ({ data }) => (
     </div>
 
     <div class="small-container ">
-      <div class="large-text bold-text">Branding</div>
+      <div class="large-text bold-text mdeium-text-box">Branding</div>
       <hr />
       <div class="flex-container-services">
         <div class="services-box">
@@ -133,7 +133,7 @@ const CaseStudyPage = ({ data }) => (
     </div>
 
     <div class="small-container ">
-      <div class="large-text bold-text">Communications</div>
+      <div class="large-text bold-text mdeium-text-box">Communications</div>
       <hr />
       <div class="flex-container-services">
         <div class="services-box">
@@ -166,7 +166,7 @@ const CaseStudyPage = ({ data }) => (
     </div>
 
     <div class="small-container ">
-      <div class="large-text bold-text">Communications</div>
+      <div class="large-text bold-text mdeium-text-box">Communications</div>
       <hr />
       <div class="flex-container-services">
         <div class="services-box">
@@ -194,8 +194,8 @@ const CaseStudyPage = ({ data }) => (
       </div>
     </div>
 
-    <div class="small-container bold-text">
-      <div class="large-text">Need Interactive Services?</div>
+    <div class="small-container">
+      <div class="large-text bold-text">Need Interactive Services?</div>
       <hr class="space-around" />
       <button type="button" class="btn btn-light btn-align">
         Let's chat about your needs.

@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
+import "./style.scss"
 
 const Socials = () => {
   return (
-    <div>
-      <small>Social</small>
-      <br />
+    <div class="socials-flex-container">
+      <small class="title">Social</small>
       <small>
         <Link
           to="#"
@@ -17,7 +17,6 @@ const Socials = () => {
           Facebook
         </Link>
       </small>
-      <br />
       <small>
         <Link
           to="#"
@@ -29,7 +28,6 @@ const Socials = () => {
           Dribbble
         </Link>
       </small>
-      <br />
       <small>
         <Link
           to="#"
@@ -41,7 +39,6 @@ const Socials = () => {
           Behance
         </Link>
       </small>
-      <br />
       <small>
         <Link
           to="#"
@@ -53,7 +50,6 @@ const Socials = () => {
           Github
         </Link>
       </small>
-      <br />
       <small>
         <Link
           to="#"
