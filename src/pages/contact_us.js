@@ -16,6 +16,13 @@ const useStyles = makeStyles(styles)
 
 const ContactUsPage = ({ data }) => {
   const classes = useStyles()
+  const sources = [
+    data.big_picture_desktop.childImageSharp.fluid,
+    {
+      ...data.big_picture_mobile.childImageSharp.fluid,
+      media: `(max-width: 480px)`,
+    },
+  ]
 
   return (
     <Layout>
@@ -38,37 +45,31 @@ const ContactUsPage = ({ data }) => {
           <TextField
             id="first-name"
             label="First Name"
-            // className={classes.shortText}
             className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="last-name"
             label="Last Name"
-            // className={classes.shortText}
             className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="email"
             label="Email"
-            //  className={classes.shortText}
             className={classes.shortText + " large-text-box"}
           />
           <TextField
             id="phone-number"
             label="Phone Number"
-            // className={classes.shortText}
             className={classes.shortText + " large-text-box"}
           />
           <TextField
             id="company-name"
             label="Company Name"
-            // className={classes.shortText}
             className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="role"
             label="Your title/role"
-            // className={classes.shortText}
             className={classes.shortText + " small-text-box"}
           />
           <TextField
@@ -86,7 +87,7 @@ const ContactUsPage = ({ data }) => {
 
       <div class="big-picture space-around">
         <Img
-          fluid={data.slide01ql.childImageSharp.fluid}
+          fluid={sources}
           alt="slide-1"
           style={{ maxWidth: `100%`, maxHeight: `100%` }}
         />
@@ -99,9 +100,16 @@ export default ContactUsPage
 
 export const data = graphql`
   query {
-    slide01ql: file(relativePath: { eq: "office.jpg" }) {
+    big_picture_desktop: file(relativePath: { eq: "office.jpg" }) {
       childImageSharp {
-        fluid(fit: FILL, maxWidth: 1600, maxHeight: 1300) {
+        fluid(fit: FILL, maxWidth: 1600, maxHeight: 700) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    big_picture_mobile: file(relativePath: { eq: "office.jpg" }) {
+      childImageSharp {
+        fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
           ...GatsbyImageSharpFluid
         }
       }

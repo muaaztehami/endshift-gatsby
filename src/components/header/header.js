@@ -12,10 +12,12 @@ const Header = ({ siteTitle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 30
-      if (show) {
-        setHeaderBackground("solid-header")
-      } else {
-        setHeaderBackground("transparent-header")
+      if (headerRef.current != "dark-header") {
+        if (show) {
+          setHeaderBackground("solid-header")
+        } else {
+          setHeaderBackground("transparent-header")
+        }
       }
     }
     document.addEventListener("scroll", handleScroll)

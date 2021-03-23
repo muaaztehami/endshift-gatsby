@@ -330,6 +330,12 @@ a:focus {
 
 .large-text {
   font-size: 28px;
+  @media screen and (max-width: 480px) {font-size: 22px;}
+}
+
+.extra-larg-text {
+  font-size: 55px;
+  @media screen and (max-width: 480px) {font-size: 45px;}
 }
 
 .bold-text {
@@ -374,11 +380,11 @@ a:focus {
     width: 35%;
     margin-top: 70px;
     margin-inline-end: 50px;
-    @media screen and (max-width: 480px) {width: 100%; margin-inline-end: 0px;}
+    @media screen and (max-width: 480px) {width: 100%; margin-inline-end: 0px; margin-top: 37px;}
   }
   div.card:nth-child(even) {
     margin-top: 150px;
-    @media screen and (max-width: 480px) {margin-top: 0px;}
+    @media screen and (max-width: 480px) {margin-top: 37px;}
   }
   
 }
@@ -411,16 +417,15 @@ a:focus {
   max-width: 960px;
   padding: 0 1.0875rem 1.45rem;
 }
+
 .top-container {
   margin-top: 150px !important;
-}
-.extra-larg-text {
-  font-size: 55px;
 }
 
 .big-picture {
   width: 100%;
-  height: 600px;
+  // height: 600px;
+  height:fit-content
 }
 
 .link-style {
@@ -471,16 +476,14 @@ small {
 
 @media screen and (max-width: 480px) {
   .small-container {
-    padding: 0 35px;
+    padding: 0 35px 30px;
+    margin-top: 49px;
   }
   .mdeium-text-box {
     width: 100%;
   }
   .hide {
     display: none;
-  }
-  .small-container {
-    margin-top: 49px;
   }
   .space-around {
     margin: 49px 0px;
@@ -491,5 +494,8 @@ small {
   }
   .big-screen {
     display: none;
+  }
+  .mobile-card {
+    text-align: center;
   }
 }

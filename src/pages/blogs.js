@@ -22,7 +22,7 @@ const BlogPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container">
+      <div class="small-container big-screen">
         <div class="flex-container">
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} class="blog-card">
@@ -45,6 +45,31 @@ const BlogPage = ({ data }) => {
           ))}
         </div>
       </div>
+
+      <div class="small-container small-screen">
+        <div class="">
+          {data.allMarkdownRemark.edges.map(post => (
+            <div key={post.node.id} class="space-around">
+              <Link to={post.node.fields.slug} class="link-style">
+                <small>{post.node.frontmatter.date}</small>
+                <p class="bold-text large-text" style={{ margin: `0` }}>
+                  {post.node.frontmatter.title}
+                </p>
+                <hr />
+                <div style={{ width: `90%`, marginLeft: `10%` }}>
+                  <div
+                    class="description"
+                    dangerouslySetInnerHTML={{ __html: post.node.html }}
+                  />
+                  <button type="button" class="btn btn-light btn-align">
+                    Learn more
+                  </button>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -59,6 +84,7 @@ export const data = graphql`
       edges {
         node {
           id
+          html
           fields {
             slug
           }

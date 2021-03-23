@@ -152,7 +152,7 @@ const AboutPage = ({ data }) => {
         </div>
       </div>
 
-      <div style={{ padding: `100px 0px` }}>
+      <div>
         <MainSlider />
       </div>
 

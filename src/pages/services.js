@@ -6,6 +6,13 @@ import Img from "gatsby-image"
 import "../styles/services.scss"
 
 const ServicesPage = ({ data }) => {
+  const sources = [
+    data.big_picture_desktop.childImageSharp.fluid,
+    {
+      ...data.big_picture_mobile.childImageSharp.fluid,
+      media: `(max-width: 480px)`,
+    },
+  ]
   return (
     <Layout>
       <SEO title="Services" />
@@ -197,7 +204,7 @@ const ServicesPage = ({ data }) => {
 
       <div class="big-picture space-around">
         <Img
-          fluid={data.slide01ql.childImageSharp.fluid}
+          fluid={sources}
           alt="slide-1"
           style={{ maxWidth: `100%`, maxHeight: `100%` }}
         />
@@ -227,6 +234,20 @@ export const data = graphql`
     slide02ql: file(relativePath: { eq: "office1.jpeg" }) {
       childImageSharp {
         fluid(fit: FILL, maxWidth: 1600, maxHeight: 1300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    big_picture_desktop: file(relativePath: { eq: "office.jpg" }) {
+      childImageSharp {
+        fluid(fit: FILL, maxWidth: 1600, maxHeight: 700) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    big_picture_mobile: file(relativePath: { eq: "office.jpg" }) {
+      childImageSharp {
+        fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
           ...GatsbyImageSharpFluid
         }
       }

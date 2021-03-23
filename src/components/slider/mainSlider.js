@@ -30,9 +30,16 @@ const MainSlider = () => {
           node {
             id
             frontmatter {
-              slide_image {
+              slide_image_desktop: slide_image {
                 childImageSharp {
                   fluid(fit: FILL, maxWidth: 1600, maxHeight: 600) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              slide_image_mobile: slide_image {
+                childImageSharp {
+                  fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -50,7 +57,15 @@ const MainSlider = () => {
         {data.allMarkdownRemark.edges.map(slide => (
           <div class="big-card" key={slide.node.id}>
             <Img
-              fluid={slide.node.frontmatter.slide_image.childImageSharp.fluid}
+              fluid={[
+                slide.node.frontmatter.slide_image_desktop.childImageSharp
+                  .fluid,
+                {
+                  ...slide.node.frontmatter.slide_image_mobile.childImageSharp
+                    .fluid,
+                  media: `(max-width: 480px)`,
+                },
+              ]}
               alt="slide-1"
               style={{ maxWidth: `100%`, maxHeight: `100%` }}
             />

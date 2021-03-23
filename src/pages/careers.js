@@ -100,7 +100,7 @@ const CareersPage = ({ data }) => {
         </div>
       </div>
 
-      <div style={{ padding: `100px 0px` }}>
+      <div>
         <MainSlider />
       </div>
 
@@ -207,37 +207,6 @@ const CareersPage = ({ data }) => {
             </div>
           </div>
         </div>
-
-        {/* <div class="flex-container-services">
-          <div style={{ width: `52%` }}>
-            {data.allMarkdownRemark.edges.map((jobs, index) => (
-              <Link to="#" class="link-style">
-                <div class="flex-container space-around" key={jobs.node.id}>
-                  <div style={{ width: `10%` }}>
-                    {index + 1 < 10 && "0"}
-                    {index + 1}
-                  </div>
-                  <div style={{ width: `90%` }}>
-                    <div>
-                      <p
-                        class="bold-text"
-                        style={{ float: `left`, marginBottom: 0, width: `70%` }}
-                      >
-                        {jobs.node.frontmatter.title}
-                      </p>
-                      <small class="bold-text" style={{ float: `right` }}>
-                        {jobs.node.frontmatter.nature}
-                      </small>
-                    </div>
-                    <div style={{ clear: `both` }}>
-                      <small>{jobs.node.frontmatter.tagline}</small>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div> */}
       </div>
 
       <div class="small-container">

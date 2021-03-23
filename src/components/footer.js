@@ -92,7 +92,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>
             <Link
-              to="about"
+              to="/about"
               style={{
                 color: `white`,
                 textDecoration: `none`,
@@ -116,7 +116,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>
             <Link
-              to="careers"
+              to="/careers"
               style={{
                 color: `white`,
                 textDecoration: `none`,
@@ -128,7 +128,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>
             <Link
-              to="blogs"
+              to="/blogs"
               style={{
                 color: `white`,
                 textDecoration: `none`,
