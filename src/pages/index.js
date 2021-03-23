@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import BlogsSlider from "../components/slider/blogsSlider"
+import BlogsSliderMobile from "../components/mobileViews/blogsSliderMobile"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -40,7 +41,7 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
       <hr />
-      <div class="flex-container">
+      <div class="flex-container-reverse">
         <div class="box">
           <button type="button" class="btn btn-light btn-align">
             Learn more
@@ -147,8 +148,11 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
-    <div>
+    <div class="big-screen">
       <BlogsSlider />
+    </div>
+    <div class="small-screen">
+      <BlogsSliderMobile />
     </div>
   </Layout>
 )

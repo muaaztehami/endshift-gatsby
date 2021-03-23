@@ -44,6 +44,9 @@ const Menu = ({ changeHeader }) => {
             <li>
               <Link to="/contact_us">Contact</Link>
             </li>
+            <li>
+              <Link to="/blogs">Blogs</Link>
+            </li>
           </ul>
         </div>
         <div class="menu-right-box">

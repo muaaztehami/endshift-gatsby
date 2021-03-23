@@ -140,7 +140,7 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-container flex-container" style={{ marginLeft: `auto` }}>
+      <div class="big-container flex-container right-box">
         <div class="card-services big-container-img">
           <p class="bold-text">Discovery & Statergy</p>
           <small>
@@ -168,7 +168,7 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-container flex-container" style={{ marginRight: `auto` }}>
+      <div class="big-container flex-container-reverse left-box">
         <div class="card-services">
           <Img
             fluid={data.slide02ql.childImageSharp.fluid}

@@ -13,10 +13,33 @@ const settings = {
   speed: 500,
   centerMode: true,
   centerPadding: "33.5%",
+  // mobileFirst: true,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        centerPadding: "33.5%",
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        centerPadding: "0%",
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.1,
+        centerPadding: "0%",
+      },
+    },
+  ],
 }
 
 const AboutSlider = () => {

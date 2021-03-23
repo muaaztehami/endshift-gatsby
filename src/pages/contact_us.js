@@ -38,28 +38,38 @@ const ContactUsPage = ({ data }) => {
           <TextField
             id="first-name"
             label="First Name"
-            className={classes.shortText}
+            // className={classes.shortText}
+            className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="last-name"
             label="Last Name"
-            className={classes.shortText}
+            // className={classes.shortText}
+            className={classes.shortText + " small-text-box"}
           />
-          <TextField id="email" label="Email" className={classes.shortText} />
+          <TextField
+            id="email"
+            label="Email"
+            //  className={classes.shortText}
+            className={classes.shortText + " large-text-box"}
+          />
           <TextField
             id="phone-number"
             label="Phone Number"
-            className={classes.shortText}
+            // className={classes.shortText}
+            className={classes.shortText + " large-text-box"}
           />
           <TextField
             id="company-name"
             label="Company Name"
-            className={classes.shortText}
+            // className={classes.shortText}
+            className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="role"
             label="Your title/role"
-            className={classes.shortText}
+            // className={classes.shortText}
+            className={classes.shortText + " small-text-box"}
           />
           <TextField
             id="detail"

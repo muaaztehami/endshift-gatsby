@@ -36,7 +36,9 @@ const BlogPage = ({ data }) => {
                     style={{ maxWidth: `100%`, maxHeight: `100%` }}
                   />
                 </div>
-                <p class="bold-text">{post.node.frontmatter.title}</p>
+                <p class="bold-text" style={{ margin: `0` }}>
+                  {post.node.frontmatter.title}
+                </p>
                 <small>{post.node.frontmatter.date}</small>
               </Link>
             </div>
@@ -66,7 +68,7 @@ export const data = graphql`
             author
             cover_image {
               childImageSharp {
-                fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
+                fluid(fit: FILL, maxWidth: 1600, maxHeight: 800) {
                   ...GatsbyImageSharpFluid
                 }
               }

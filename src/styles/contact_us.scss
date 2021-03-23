@@ -7,3 +7,12 @@
   border-color: transparent;
   text-align: left;
 }
+
+@media screen and (max-width: 480px) {
+  .large-text-box {
+    width: 100%;
+  }
+  .small-text-box {
+    width: 43%;
+  }
+}

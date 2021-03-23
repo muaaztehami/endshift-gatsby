@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/services.scss"
-// import "../styles/careers.scss"
+import "../styles/careers.scss"
 import CareersSlider from "../components/slider/careersSlider"
 import MainSlider from "../components/slider/mainSlider"
 import { graphql, Link } from "gatsby"
@@ -159,24 +159,56 @@ const CareersPage = ({ data }) => {
           </div>
         </div>
         <hr />
-        <div class="flex-container">
-          <div class="box">
+        <div class="flex-container-reverse">
+          <div class="box-left">
             <button type="button" class="btn btn-light btn-align">
               Learn more
             </button>
           </div>
-          <div class="box">
-            <small>
-              Great work has a purpose, it solves a problem, it creates
-              wrapperStyle for people to connect. If it wins awards or if other
-              people think it's cool then that's nice, we guess, but that's not
-              why we do it. We do it because it has impact, it helps someone, it
-              makes their lives easier or just more fun.
-            </small>
+          <div class="box-right">
+            <div class="left-padding">
+              <small>
+                Great work has a purpose, it solves a problem, it creates ways
+                for people to connect. If it wins awards or if other people
+                think it's cool then that's nice, we guess, but that's not why
+                we do it. We do it because it has impact, it helps someone, it
+                makes their lives easier or just more fun.
+              </small>
+            </div>
+            <div>
+              {data.allMarkdownRemark.edges.map((jobs, index) => (
+                <Link to="#" class="link-style">
+                  <div class="flex-container space-around" key={jobs.node.id}>
+                    <div class="left">
+                      {index + 1 < 10 && "0"}
+                      {index + 1}
+                    </div>
+                    <div class="center">
+                      <p
+                        class="bold-text"
+                        style={{
+                          marginBottom: 0,
+                        }}
+                      >
+                        {jobs.node.frontmatter.title}
+                      </p>
+                    </div>
+                    <div class="right">
+                      <small class="bold-text">
+                        {jobs.node.frontmatter.nature}
+                      </small>
+                    </div>
+                    <div class="content">
+                      <small>{jobs.node.frontmatter.tagline}</small>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div class="flex-container-services">
+        {/* <div class="flex-container-services">
           <div style={{ width: `52%` }}>
             {data.allMarkdownRemark.edges.map((jobs, index) => (
               <Link to="#" class="link-style">
@@ -205,7 +237,7 @@ const CareersPage = ({ data }) => {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div class="small-container">

@@ -1,0 +1,60 @@
+.flex-container {
+  .left {
+    width: 10%;
+  }
+  .center {
+    width: 60%;
+  }
+  .right {
+    width: 30%;
+    text-align: end;
+  }
+  .content {
+    width: 100%;
+    padding-left: 10%;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    #wrapper {
+      flex-wrap:wrap;
+      height: 100px;
+    }
+    .center {
+      width: 100%;
+      order: 3;
+      margin: 10px 0;
+    }
+  
+    .left {
+      width: 50%;
+    }
+    .right {
+      width:50%;
+      order:2;
+    }
+    .content {
+      padding: 0;
+      order: 4;
+      margin-top: 0;
+    }
+  }
+}
+
+.flex-container-reverse {
+  div.box-left {
+    width: 46%;
+    margin: 5px;
+    @media screen and (max-width: 480px) {width: 100%;}
+  }
+  div.box-right {
+    width: 50%;
+    margin: 5px;
+    @media screen and (max-width: 480px) {width: 100%;}
+  }
+}
+
+.left-padding {
+  padding-left: 10%;
+  @media screen and (max-width: 480px) {padding-left: 0%;}
+}

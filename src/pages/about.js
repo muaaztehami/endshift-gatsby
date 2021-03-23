@@ -8,6 +8,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import svgs from "../images/ibm.svg"
 import "../styles/about.scss"
+import AuthorsSliderMobile from "../components/mobileViews/authorsSliderMobile"
 
 export const aboutSlider = () => {}
 const AboutPage = ({ data }) => {
@@ -197,8 +198,11 @@ const AboutPage = ({ data }) => {
           <div class="large-text bold-text">Not Just Some Pretty Faces</div>
           <hr />
         </div>
-        <div>
+        <div class="big-screen">
           <AuthorsSlider />
+        </div>
+        <div class="small-screen">
+          <AuthorsSliderMobile />
         </div>
       </div>
     </Layout>
