@@ -52,8 +52,10 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>+1.858.755.6922</small>
         </div>
+      </div>
 
-        <div class="footer">
+      <div class="flex-container">
+        <div class="footer address">
           <small>Location</small>
           <br />
           <small>
@@ -142,7 +144,7 @@ const Footer = ({ siteTitle }) => (
           <Socials />
         </div>
 
-        <div class="footer" style={{ color: `#808080` }}>
+        <div class="footer company" style={{ color: `#808080` }}>
           <small>©2020 ENDSHIFT IO.</small>
           <br />
           <small>All rigths Reserved</small>

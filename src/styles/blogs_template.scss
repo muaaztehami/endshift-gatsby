@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  color: black;
+  width: 100%;
+  height: fit-content;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  color: black;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 480px) {left: 37%;}
+}

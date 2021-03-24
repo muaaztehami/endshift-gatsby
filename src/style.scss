@@ -370,10 +370,16 @@ a:focus {
     }
   }
   .sites {
-    @media screen and (max-width: 480px) {width: 45% !important;}
+    @media screen and (max-width: 480px) {width: 45% !important; order: 1}
   }
   .socials  {
-    @media screen and (max-width: 480px) {width: 20% !important;}
+    @media screen and (max-width: 480px) {width: 20% !important; order: 2}
+  }
+  .address  {
+    @media screen and (max-width: 480px) {padding-right: 36%; order: 3}
+  }
+  .company  {
+    @media screen and (max-width: 480px) {order: 4}
   }
   div.card {
     border: none;

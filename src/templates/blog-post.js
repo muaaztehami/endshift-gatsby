@@ -5,10 +5,19 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
+import "../styles/blogs_template.scss"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title || `Title`
+
+  const sources = [
+    post.frontmatter.cover_image_desktop.childImageSharp.fluid,
+    {
+      ...post.frontmatter.cover_image_mobile.childImageSharp.fluid,
+      media: `(max-width: 480px)`,
+    },
+  ]
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -16,8 +25,20 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <div class="container">
+        <Img
+          fluid={sources}
+          alt="slide-1"
+          style={{ width: `100%`, height: `100%`, opacity: `0.5` }}
+        />
+        <div class="centered">
+          <div class="space-around">
+            <h1 class="large-text bold-text">{post.frontmatter.title}</h1>
+          </div>
+        </div>
+      </div>
 
-      <div
+      {/* <div
         style={{ width: `100%`, height: `400px`, position: `relative` }}
         class="space-around"
       >
@@ -37,7 +58,8 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <h1 class="large-text bold-text">{post.frontmatter.title}</h1>
         </div>
-      </div>
+      </div> */}
+
       <div class="small-container">
         <div class="space-around">
           <article
@@ -73,9 +95,16 @@ export const pageQuery = graphql`
         title
         author
         date
-        cover_image {
+        cover_image_desktop: cover_image {
           childImageSharp {
-            fluid(fit: FILL, maxWidth: 1600, maxHeight: 400) {
+            fluid(fit: FILL, maxWidth: 1600, maxHeight: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        cover_image_mobile: cover_image {
+          childImageSharp {
+            fluid(fit: FILL, maxWidth: 800, maxHeight: 1600) {
               ...GatsbyImageSharpFluid
             }
           }
