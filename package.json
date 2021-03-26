@@ -47,7 +47,12 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -63,6 +68,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint --ext .js,.jsx,.tsx --ignore-path .gitignore . && prettier --check \"**/*.+(js|jsx|tsx|json|css|scss)\" --ignore-path .gitignore",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.tsx --ignore-path .gitignore . && prettier --check \"**/*.+(js|jsx|tsx|json|css|scss)\" --ignore-path .gitignore",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
