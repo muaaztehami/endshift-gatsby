@@ -2,9 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import BlogsSlider from "../components/slider/blogsSlider"
 import BlogsSliderMobile from "../components/mobileViews/blogsSliderMobile"
+import scrollDown from "../utils/scrollDown"
 
 const IndexPage = ({ data }) => {
   const sources = [
@@ -27,18 +28,38 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div class="space-around">
-          <button type="button" class="btn btn-light btn-align">
+          <Link
+            to="/contact_us"
+            style={{
+              color: `black`,
+              textDecoration: `none`,
+            }}
+          >
             Contact us
-          </button>
+          </Link>
         </div>
       </div>
-      <div class="small-container full-image" style={{ marginTop: `0` }}>
-        <div style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}>
-          <Img
-            fluid={sources}
-            alt="slide-1"
-            style={{ maxWidth: `100%`, maxHeight: `100%` }}
-          />
+      <div class="flex-container-reverse">
+        <div
+          class="small-container full-image"
+          style={{ margin: `0 0 0 auto` }}
+        >
+          <div style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}>
+            <Img
+              fluid={sources}
+              alt="slide-1"
+              style={{ maxWidth: `100%`, maxHeight: `100%` }}
+            />
+          </div>
+        </div>
+        <div class="side-scroll-btn">
+          <button
+            type="button"
+            class="btn btn-light btn-align"
+            onClick={scrollDown}
+          >
+            Scroll down
+          </button>
         </div>
       </div>
       <div class="small-container">
@@ -76,8 +97,22 @@ const IndexPage = ({ data }) => {
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <p style={{ fontWeight: `bold` }}>V-art Gallery</p>
-            <small>[Websites][Branding & Brand Identity]</small>
+            <div class="flex-container" style={{ marginTop: `20px` }}>
+              <div
+                style={{
+                  width: `10%`,
+                  display: `flex`,
+                  flexDirection: `column`,
+                  justifyContent: `center`,
+                }}
+              >
+                01
+              </div>
+              <div style={{ width: `90%` }}>
+                <p class="bold-text p-style">V-art Gallery</p>
+                <small>[Websites][Branding & Brand Identity]</small>
+              </div>
+            </div>
           </div>
 
           <div class="card mobile-card">
@@ -88,8 +123,22 @@ const IndexPage = ({ data }) => {
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <p style={{ fontWeight: `bold` }}>V-art Gallery</p>
-            <small>[Websites][Branding & Brand Identity]</small>
+            <div class="flex-container" style={{ marginTop: `20px` }}>
+              <div
+                style={{
+                  width: `10%`,
+                  display: `flex`,
+                  flexDirection: `column`,
+                  justifyContent: `center`,
+                }}
+              >
+                02
+              </div>
+              <div style={{ width: `90%` }}>
+                <p class="bold-text p-style">V-art Gallery</p>
+                <small>[Websites][Branding & Brand Identity]</small>
+              </div>
+            </div>
           </div>
 
           <div class="card mobile-card">
@@ -100,8 +149,22 @@ const IndexPage = ({ data }) => {
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <p style={{ fontWeight: `bold` }}>V-art Gallery</p>
-            <small>[Websites][Branding & Brand Identity]</small>
+            <div class="flex-container" style={{ marginTop: `20px` }}>
+              <div
+                style={{
+                  width: `10%`,
+                  display: `flex`,
+                  flexDirection: `column`,
+                  justifyContent: `center`,
+                }}
+              >
+                03
+              </div>
+              <div style={{ width: `90%` }}>
+                <p class="bold-text p-style">V-art Gallery</p>
+                <small>[Websites][Branding & Brand Identity]</small>
+              </div>
+            </div>
           </div>
 
           <div class="card mobile-card">
@@ -112,8 +175,22 @@ const IndexPage = ({ data }) => {
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <p style={{ fontWeight: `bold` }}>V-art Gallery</p>
-            <small>[Websites][Branding & Brand Identity]</small>
+            <div class="flex-container" style={{ marginTop: `20px` }}>
+              <div
+                style={{
+                  width: `10%`,
+                  display: `flex`,
+                  flexDirection: `column`,
+                  justifyContent: `center`,
+                }}
+              >
+                04
+              </div>
+              <div style={{ width: `90%` }}>
+                <p class="bold-text p-style">V-art Gallery</p>
+                <small>[Websites][Branding & Brand Identity]</small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,21 +206,30 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <hr />
-          <div class="flex-container">
+          <div class="flex-container-reverse">
             <div class="box">
-              <button type="button" class="btn btn-light btn-align">
+              <button
+                type="button"
+                class="btn btn-light btn-align"
+                style={{ color: `white` }}
+              >
                 Learn more
               </button>
             </div>
             <div class="box">
               <small>
-                Dolore ut ipsum deserunt amet non nisi eu do irure eu eiusmod
-                sit laborum. Nisi velit fugiat culpa proident commodo occaecat
-                cupidatat nostrud. Sit id sunt do amet aute aliqua mollit tempor
-                aliquip ex ea labore. Anim nulla nulla amet enim esse
-                consectetur nostrud ea nostrud cillum exercitation ad tempor
-                non. Nisi ex irure mollit consequat commodo ipsum.
+                Our team and our culture is fueled by passion: for what we do,
+                for the people we do it for, and for the people we work
+                alongside. Take a glimpse behind the scene at the heart of our
+                company and the people who make up Focus Lab.
               </small>
+              <br />
+              <br />
+              <p class="bold-text">Discovery & Strategy</p>
+              <p class="bold-text">Branding</p>
+              <p class="bold-text">Interactive</p>
+              <p class="bold-text">Creative</p>
+              <p class="bold-text">Development Solutions</p>
             </div>
           </div>
         </div>

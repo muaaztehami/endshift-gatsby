@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import "../styles/case_study.scss"
 import MainSlider from "../components/slider/mainSlider"
+import scrollDown from "../utils/scrollDown"
 
 const CaseStudyPage = ({ data }) => {
   const sources_big_picture = [
@@ -48,6 +49,15 @@ const CaseStudyPage = ({ data }) => {
               Launch project
             </button>
           </div>
+        </div>
+        <div class="case-study-scroll-btn">
+          <button
+            type="button"
+            class="btn btn-light btn-align"
+            onClick={scrollDown}
+          >
+            Scroll down
+          </button>
         </div>
       </div>
 

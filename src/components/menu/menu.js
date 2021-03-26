@@ -36,7 +36,7 @@ const Menu = ({ changeHeader }) => {
               <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link to="/news">News</Link>
+              <Link to="#">News</Link>
             </li>
             <li>
               <Link to="/careers">Careers</Link>

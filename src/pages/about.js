@@ -9,6 +9,7 @@ import { graphql } from "gatsby"
 import svgs from "../images/ibm.svg"
 import "../styles/about.scss"
 import AuthorsSliderMobile from "../components/mobileViews/authorsSliderMobile"
+import scrollDown from "../utils/scrollDown"
 
 export const aboutSlider = () => {}
 const AboutPage = ({ data }) => {
@@ -25,6 +26,21 @@ const AboutPage = ({ data }) => {
             organizations to provide exceptional custom solutions.
           </div>
         </div>
+      </div>
+
+      <div
+        class="mid-scroll-btn scroll-margin-m"
+        style={{
+          marginBottom: `20px`,
+        }}
+      >
+        <button
+          type="button"
+          class="btn btn-light btn-align"
+          onClick={scrollDown}
+        >
+          Scroll down
+        </button>
       </div>
 
       <div style={{ backgroundColor: `black`, padding: `100px 0px` }}>
@@ -53,7 +69,7 @@ const AboutPage = ({ data }) => {
       </div>
 
       <div class="medium-container flex-container">
-        <div class="box" style={{ alignSelf: `flex-end` }}>
+        <div class="about-box hide" style={{ alignSelf: `flex-end` }}>
           <div style={{ height: `60%` }}>
             <Img
               fluid={data.sideimg.childImageSharp.fluid}
@@ -65,7 +81,7 @@ const AboutPage = ({ data }) => {
             />
           </div>
         </div>
-        <div class="box">
+        <div class="about-box">
           <div class="top-box">
             <p class="bold-text">We dont't design in a vacuum.</p>
             <small>
@@ -103,6 +119,16 @@ const AboutPage = ({ data }) => {
               research allows us the ability to continuously deliver while
               always keeping an eye on the long-term vision.
             </small>
+          </div>
+          <div class="small-screen" style={{ height: `fit-content` }}>
+            <Img
+              fluid={data.sideimg.childImageSharp.fluid}
+              alt="slide-1"
+              style={{
+                width: `100%`,
+                height: `100%`,
+              }}
+            />
           </div>
           <div class="bottom-box">
             <p class="bold-text">
@@ -152,7 +178,7 @@ const AboutPage = ({ data }) => {
         </div>
       </div>
 
-      <div>
+      <div style={{ padding: `100px 0px` }}>
         <MainSlider />
       </div>
 

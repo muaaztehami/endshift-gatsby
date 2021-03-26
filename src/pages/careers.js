@@ -6,6 +6,7 @@ import "../styles/careers.scss"
 import CareersSlider from "../components/slider/careersSlider"
 import MainSlider from "../components/slider/mainSlider"
 import { graphql, Link } from "gatsby"
+import scrollDown from "../utils/scrollDown"
 
 const CareersPage = ({ data }) => {
   return (
@@ -21,6 +22,16 @@ const CareersPage = ({ data }) => {
             way.
           </div>
         </div>
+      </div>
+
+      <div class="mid-scroll-btn scroll-margin-l">
+        <button
+          type="button"
+          class="btn btn-light btn-align"
+          onClick={scrollDown}
+        >
+          Scroll down
+        </button>
       </div>
 
       <div style={{ padding: `100px 0px` }}>
@@ -112,41 +123,43 @@ const CareersPage = ({ data }) => {
       >
         <div class="small-container flex-container">
           <div class="card-services">
-            <p class="bold-text">Interactive</p>
+            <p class="bold-text">Value driven</p>
             <small>
-              We bring brands and products to life on the web by creating
-              interfaces and interactions that make sense. We learn to think
-              like your users, and we seek to present information and actions
-              where, and how, they look for them.
-            </small>
-            <br />
-            <br />
-            <br />
-            <p class="bold-text">Interactive</p>
-            <small>
-              We bring brands and products to life on the web by creating
-              interfaces and interactions that make sense. We learn to think
-              like your users, and we seek to present information and actions
-              where, and how, they look for them.
+              Our values define who we are on our best days and who we aspire to
+              be every day. They continue to evolve and change with us, but we
+              created them to facilitate a culture that continues to create
+              great work. Want to know more about our values? You're in luck.
             </small>
           </div>
           <div class="card-services">
-            <p class="bold-text">Interactive</p>
+            <p class="bold-text">Strength through diversity</p>
             <small>
-              We bring brands and products to life on the web by creating
-              interfaces and interactions that make sense. We learn to think
-              like your users, and we seek to present information and actions
-              where, and how, they look for them.
+              When people come from different backgrounds the work they created
+              together becomes better. We don't look for culture fits, we look
+              for culture additions. The people of Ueno came from over 25
+              different countries, and from all walks of life. About half of our
+              people are men, even almost of our leadership team are men.
             </small>
-            <br />
-            <br />
-            <br />
-            <p class="bold-text">Interactive</p>
+          </div>
+          <div class="card-services">
+            <p class="bold-text">Yearly retreats</p>
             <small>
-              We bring brands and products to life on the web by creating
-              interfaces and interactions that make sense. We learn to think
-              like your users, and we seek to present information and actions
-              where, and how, they look for them.
+              Every year the whoe company goes away for a week. All our people
+              come together from our different offices to work and play
+              together. It's a time to remind ourselves that behind the avatar
+              is a real person, and a time for all of us to help shape the
+              vision of who we want to become. So far we've gone to Plam
+              Springs, Iceland, upstate New York and Vancouver.
+            </small>
+          </div>
+
+          <div class="card-services">
+            <p class="bold-text">Ad Age Best Place to Work</p>
+            <small>
+              Ok, sure. An award doesn't prove anything. But we thought we'd add
+              this a bit of "proof". You see, our people voted us on the Ad Age
+              Best Place to Work in 2019. It doesn't tell you everything but
+              maybe it tells you something?
             </small>
           </div>
         </div>

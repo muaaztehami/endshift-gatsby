@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/services.scss"
+import scrollDown from "../utils/scrollDown"
 
 const ServicesPage = ({ data }) => {
   const sources = [
@@ -26,6 +27,21 @@ const ServicesPage = ({ data }) => {
             organizations to provide exceptional custom solutions.
           </div>
         </div>
+      </div>
+
+      <div
+        class="mid-scroll-btn scroll-margin-m"
+        style={{
+          marginBottom: `20px`,
+        }}
+      >
+        <button
+          type="button"
+          class="btn btn-light btn-align"
+          onClick={scrollDown}
+        >
+          Scroll down
+        </button>
       </div>
 
       <div class="small-container ">

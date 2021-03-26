@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
-
 import "./style.scss"
 
 const settings = {
@@ -13,11 +12,11 @@ const settings = {
   speed: 500,
   centerMode: true,
   centerPadding: "33.5%",
-  // mobileFirst: true,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  swipeToSlide: true,
   responsive: [
     {
       breakpoint: 1024,

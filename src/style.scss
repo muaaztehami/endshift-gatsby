@@ -75,6 +75,7 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -430,7 +431,6 @@ a:focus {
 
 .big-picture {
   width: 100%;
-  // height: 600px;
   height:fit-content
 }
 
@@ -466,6 +466,49 @@ small {
     margin: 5px;
     @media screen and (max-width: 480px) {width: 84%;}
   }
+  .small-container {
+    width: 82%;
+    @media screen and (max-width: 480px) {width: 100%;}
+  }
+}
+
+.p-style {
+  margin: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.side-scroll-btn {
+  width: 17.1%;
+  padding-left: 8%;
+  padding-top: 67px;
+  @media screen and (max-width: 480px) {width: 100%; padding: 0; text-align: center; margin-bottom: 10px;}
+}
+.side-scroll-btn-contact {
+  width: 17.1%;
+  padding-left: 8%;
+  padding-top: 167px;
+  @media screen and (max-width: 480px) {width: 100%; padding: 0; text-align: center; margin-bottom: 10px; margin-top: 80px}
+}
+.mid-scroll-btn {
+  margin-left: auto;
+  width: 9%;
+  @media screen and (max-width: 480px) {width: 100%; text-align: center;}
+}
+
+.scroll-margin-m {
+  margin-top: 124px;
+  @media screen and (max-width: 480px) {margin-top: 0}
+}
+.scroll-margin-l {
+  margin-top: 165px;
+  @media screen and (max-width: 480px) {margin-top: 0}
 }
 /* Media queries */
 

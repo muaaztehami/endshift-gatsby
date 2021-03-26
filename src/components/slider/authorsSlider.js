@@ -12,13 +12,12 @@ const settings = {
   infinite: true,
   speed: 500,
   centerMode: true,
-  centerPadding: "37%",
-  // slidesToShow: 3,
-  // infinite: false,
+  centerPadding: "33.5%",
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  swipeToSlide: true,
 }
 
 const AuthorsSlider = () => {

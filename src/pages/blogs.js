@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/blogs.scss"
+import dispplayDate from "../utils/displayDate"
+import scrollDown from "../utils/scrollDown"
 
 const BlogPage = ({ data }) => {
   return (
@@ -22,7 +24,22 @@ const BlogPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container big-screen">
+      <div
+        class="mid-scroll-btn scroll-margin-l"
+        style={{
+          marginBottom: `20px`,
+        }}
+      >
+        <button
+          type="button"
+          class="btn btn-light btn-align"
+          onClick={scrollDown}
+        >
+          Scroll down
+        </button>
+      </div>
+
+      <div class="small-container big-screen" style={{ marginTop: `0` }}>
         <div class="flex-container">
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} class="blog-card">
@@ -39,7 +56,9 @@ const BlogPage = ({ data }) => {
                 <p class="bold-text" style={{ margin: `0` }}>
                   {post.node.frontmatter.title}
                 </p>
-                <small>{post.node.frontmatter.date}</small>
+                <small>
+                  {dispplayDate(new Date(post.node.frontmatter.date))}
+                </small>
               </Link>
             </div>
           ))}
@@ -51,7 +70,9 @@ const BlogPage = ({ data }) => {
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} class="space-around">
               <Link to={post.node.fields.slug} class="link-style">
-                <small>{post.node.frontmatter.date}</small>
+                <small>
+                  {dispplayDate(new Date(post.node.frontmatter.date))}
+                </small>
                 <p class="bold-text large-text" style={{ margin: `0` }}>
                   {post.node.frontmatter.title}
                 </p>

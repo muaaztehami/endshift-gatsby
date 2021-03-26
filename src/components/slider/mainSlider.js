@@ -18,6 +18,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  swipeToSlide: true,
 }
 
 const MainSlider = () => {

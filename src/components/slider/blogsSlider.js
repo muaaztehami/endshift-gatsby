@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
+import dispplayDate from "../../utils/displayDate"
 
 import "./style.scss"
 
@@ -17,6 +18,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  swipeToSlide: true,
 }
 
 const BlogsSlider = () => {
@@ -54,7 +56,7 @@ const BlogsSlider = () => {
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
           <div key={slide.node.id} class="card">
-            <Link to={slide.node.fields.slug} class="link-style">
+            <a href={slide.node.fields.slug} class="link-style">
               <div class="blog-card-image">
                 <Img
                   fluid={
@@ -65,8 +67,10 @@ const BlogsSlider = () => {
                 />
               </div>
               <p class="bold-text">{slide.node.frontmatter.title}</p>
-              <small>{slide.node.frontmatter.date}</small>
-            </Link>
+              <small>
+                {dispplayDate(new Date(slide.node.frontmatter.date))}
+              </small>
+            </a>
           </div>
         ))}
       </Slider>

@@ -12,12 +12,12 @@ const settings = {
   infinite: true,
   speed: 500,
   centerMode: true,
-  // centerPadding: "10%",
   slidesToShow: 1,
   slidesToScroll: 0.5,
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  swipeToSlide: true,
 }
 
 const CareersSlider = () => {

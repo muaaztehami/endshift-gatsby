@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import "../styles/contact_us.scss"
 import TextField from "@material-ui/core/TextField"
 import { makeStyles } from "@material-ui/core/styles"
+import scrollDown from "../utils/scrollDown"
 
 export const styles = {
   longText: { width: "100%", margin: "20px 10px" },
@@ -35,8 +36,13 @@ const ContactUsPage = ({ data }) => {
             Fill this out so we can learn more about you and your needs.
           </div>
         </div>
+      </div>
 
-        <div class="flex-container">
+      <div class="flex-container-reverse" style={{ marginTop: `40px` }}>
+        <div
+          class="flex-container small-container"
+          style={{ margin: `0 0 0 auto` }}
+        >
           <TextField
             id="talk-about"
             label="I'd like to talk about"
@@ -79,8 +85,21 @@ const ContactUsPage = ({ data }) => {
             rows={3}
             className={classes.longText}
           />
-          <button type="button" class="btn btn-light submit-btn space-around">
+          <button
+            type="button"
+            class="btn btn-light submit-btn space-around"
+            style={{ marginRight: `auto` }}
+          >
             Submit
+          </button>
+        </div>
+        <div class="side-scroll-btn-contact">
+          <button
+            type="button"
+            class="btn btn-light btn-align"
+            onClick={scrollDown}
+          >
+            Scroll down
           </button>
         </div>
       </div>

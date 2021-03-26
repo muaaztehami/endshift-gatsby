@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import dispplayDate from "../../utils/displayDate"
 
 const BlogsSliderMobile = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +46,9 @@ const BlogsSliderMobile = () => {
                 <p class="bold-text" style={{ margin: `0` }}>
                   {blogs.node.frontmatter.title}
                 </p>
-                <small>{blogs.node.frontmatter.date}</small>
+                <small>
+                  {dispplayDate(new Date(blogs.node.frontmatter.date))}
+                </small>
               </div>
             </div>
           </Link>
