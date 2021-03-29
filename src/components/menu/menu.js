@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "./style.scss"
 import { Link } from "gatsby"
 import Socials from "../socials/socials"

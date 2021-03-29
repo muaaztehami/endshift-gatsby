@@ -62,7 +62,7 @@ const AboutPage = ({ data }) => {
         </div>
       </div>
 
-      <div className="small-container">
+      <div className="small-container" id="what-we-do">
         <div className="space-around">
           <div className="large-text bold-text mdeium-text-box">What We Do</div>
           <hr />

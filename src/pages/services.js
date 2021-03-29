@@ -52,7 +52,9 @@ const ServicesPage = ({ data }) => {
         <hr />
         <div className="flex-container-services">
           <div className="services-box">
-            <p className="bold-text">Discovery & Strategy</p>
+            <p className="bold-text" id="discovery-strategy">
+              Discovery & Strategy
+            </p>
             <small>
               A thoughtful discovery process will help us gain an accurate
               understanding of the breadth and depth of your project so that we
@@ -75,7 +77,9 @@ const ServicesPage = ({ data }) => {
             <br />
             <br />
 
-            <p className="bold-text">Branding</p>
+            <p className="bold-text" id="branding">
+              Branding
+            </p>
             <small>
               We don&apos;t just create logos, we help our partners establish an
               all-encompassing brand experience. Cool factor is not the goal --
@@ -107,6 +111,7 @@ const ServicesPage = ({ data }) => {
           color: `white`,
           padding: `1px 0 100px 0px`,
         }}
+        id="interactive"
       >
         <div className="small-container flex-container">
           <div className="card-services">
@@ -201,12 +206,12 @@ const ServicesPage = ({ data }) => {
           />
         </div>
         <div className="card-services big-container-img">
-          <p className="bold-text">Discovery & Statergy</p>
+          <p className="bold-text">Branding</p>
           <small>
-            We bring brands and products to life on the web by creating
-            interfaces and interactions that make sense. We learn to think like
-            your users, and we seek to present information and actions where,
-            and how, they look for them.
+            We don&apos;t just create logos, we help our partners establish an
+            all-encompassing brand experience. Cool factor is not the goal -- we
+            develop brand systems that will generate results and make for
+            change.
           </small>
           <br />
           <br />

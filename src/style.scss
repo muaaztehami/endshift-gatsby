@@ -558,6 +558,14 @@ button:focus {
     margin-top: 0;
   }
 }
+
+.background-img-style {
+  opacity: 1 !important;
+  background: rgb(0, 0, 0, 0.5);
+  @media screen and (max-width: 480px) {
+    background: rgb(0, 0, 0, 1) !important;
+  }
+}
 /* Media queries */
 
 @media (max-width: 42rem) {

@@ -7,6 +7,7 @@ import { graphql, Link } from "gatsby"
 import BlogsSlider from "../components/slider/blogsSlider"
 import BlogsSliderMobile from "../components/mobileViews/blogsSliderMobile"
 import scrollDown from "../utils/scrollDown"
+import BackgroundImage from "gatsby-background-image"
 
 const IndexPage = ({ data }) => {
   const sources = [
@@ -195,46 +196,106 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <div
-        style={{ backgroundColor: `grey`, padding: `100px 0px` }}
-        className="space-around"
+
+      <BackgroundImage
+        Tag="section"
+        className={"background-img-style"}
+        fluid={data.background_desktop.childImageSharp.fluid}
       >
-        <div className="small-container footer" style={{ marginTop: 0 }}>
-          <div>
-            <small className="small-text">WHAT WE DO</small>
-            <div className="large-text bold-text mdeium-text-box">
-              From the Inside Out.
+        <div
+          style={{
+            padding: `100px 0px`,
+          }}
+          className="space-around"
+        >
+          <div className="small-container footer" style={{ marginTop: 0 }}>
+            <div>
+              <small className="small-text">WHAT WE DO</small>
+              <div className="large-text bold-text mdeium-text-box">
+                From the Inside Out.
+              </div>
             </div>
-          </div>
-          <hr />
-          <div className="flex-container-reverse">
-            <div className="box">
-              <button
-                type="button"
-                className="btn btn-light btn-align"
-                style={{ color: `white` }}
-              >
-                Learn more
-              </button>
-            </div>
-            <div className="box">
-              <small>
-                Our team and our culture is fueled by passion: for what we do,
-                for the people we do it for, and for the people we work
-                alongside. Take a glimpse behind the scene at the heart of our
-                company and the people who make up Focus Lab.
-              </small>
-              <br />
-              <br />
-              <p className="bold-text">Discovery & Strategy</p>
-              <p className="bold-text">Branding</p>
-              <p className="bold-text">Interactive</p>
-              <p className="bold-text">Creative</p>
-              <p className="bold-text">Development Solutions</p>
+            <hr />
+            <div className="flex-container-reverse">
+              <div className="box">
+                <button
+                  type="button"
+                  className="btn btn-light btn-align"
+                  style={{ color: `white` }}
+                >
+                  Learn more
+                </button>
+              </div>
+              <div className="box">
+                <small>
+                  Our team and our culture is fueled by passion: for what we do,
+                  for the people we do it for, and for the people we work
+                  alongside. Take a glimpse behind the scene at the heart of our
+                  company and the people who make up Focus Lab.
+                </small>
+                <br />
+                <br />
+
+                <p className="bold-text">
+                  <Link
+                    to="/services/#discovery-strategy"
+                    style={{
+                      color: `white`,
+                      textDecoration: `none`,
+                    }}
+                  >
+                    Discovery & Strategy
+                  </Link>
+                </p>
+                <p className="bold-text">
+                  <Link
+                    to="/services/#branding"
+                    style={{
+                      color: `white`,
+                      textDecoration: `none`,
+                    }}
+                  >
+                    Branding
+                  </Link>
+                </p>
+                <p className="bold-text">
+                  <Link
+                    to="/services/#interactive"
+                    style={{
+                      color: `white`,
+                      textDecoration: `none`,
+                    }}
+                  >
+                    Interactive
+                  </Link>
+                </p>
+                <p className="bold-text">
+                  <Link
+                    to="#"
+                    style={{
+                      color: `white`,
+                      textDecoration: `none`,
+                    }}
+                  >
+                    Creative
+                  </Link>
+                </p>
+                <p className="bold-text">
+                  <Link
+                    to="#"
+                    style={{
+                      color: `white`,
+                      textDecoration: `none`,
+                    }}
+                  >
+                    Development Solutions
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </BackgroundImage>
       <div className="small-container">
         <div>
           <small className="small-text">NEWS + VIEWS</small>
@@ -274,6 +335,13 @@ export const data = graphql`
     card_image: file(relativePath: { eq: "card.jpg" }) {
       childImageSharp {
         fluid(fit: FILL, maxWidth: 1600, maxHeight: 1600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    background_desktop: file(relativePath: { eq: "office.jpg" }) {
+      childImageSharp {
+        fluid(fit: FILL, maxWidth: 1600, maxHeight: 800) {
           ...GatsbyImageSharpFluid
         }
       }

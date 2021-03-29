@@ -82,7 +82,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>
             <Link
-              to="#"
+              to="/about/#what-we-do"
               style={{
                 color: `white`,
                 textDecoration: `none`,
