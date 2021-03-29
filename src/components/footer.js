@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
       background: `#111`,
     }}
   >
-    <div class="footer small-container">
+    <div className="footer small-container">
       <h1
         style={{
           padding: `100px 0px`,
@@ -29,33 +29,33 @@ const Footer = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <small class="small-text">Get in touch</small>
-      <div class="large-text bold-text">Don't be shy, say hi.</div>
-      <div class="flex-container footer">
-        <div class="footer">
+      <small className="small-text">Get in touch</small>
+      <div className="large-text bold-text">Don&apos;t be shy, say hi.</div>
+      <div className="flex-container footer">
+        <div className="footer">
           <small>Work with us</small>
           <br />
           <small>newbusiness@endshift.io</small>
         </div>
-        <div class="footer">
+        <div className="footer">
           <small>Become a endshift</small>
           <br />
           <small>career@endshift.io</small>
         </div>
-        <div class="footer">
+        <div className="footer">
           <small>Contact Us</small>
           <br />
           <small>+1.858.755.6922</small>
         </div>
-        <div class="footer">
+        <div className="footer">
           <small>Contact Us</small>
           <br />
           <small>+1.858.755.6922</small>
         </div>
       </div>
 
-      <div class="flex-container">
-        <div class="footer address">
+      <div className="flex-container">
+        <div className="footer address">
           <small>Location</small>
           <br />
           <small>
@@ -65,7 +65,7 @@ const Footer = ({ siteTitle }) => (
           <br />
           <small>The Bay Area -- Location Undisclosed</small>
         </div>
-        <div class="footer sites">
+        <div className="footer sites">
           <small>Sites</small>
           <br />
           <small>
@@ -140,11 +140,11 @@ const Footer = ({ siteTitle }) => (
             </Link>
           </small>
         </div>
-        <div class="footer socials">
+        <div className="footer socials">
           <Socials />
         </div>
 
-        <div class="footer company" style={{ color: `#808080` }}>
+        <div className="footer company" style={{ color: `#808080` }}>
           <small>©2020 ENDSHIFT IO.</small>
           <br />
           <small>All rigths Reserved</small>

@@ -66,11 +66,11 @@ const CareersSlider = () => {
   `)
 
   return (
-    <div class="big-slider-container">
+    <div className="big-slider-container">
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
-          <div class="card " key={slide.node.id}>
-            <div class="flex-container-slider">
+          <div className="card " key={slide.node.id}>
+            <div className="flex-container-slider">
               <div style={{ width: `26%`, marginTop: `70px` }}>
                 <div style={{ marginBottom: `20px` }}>
                   <Img

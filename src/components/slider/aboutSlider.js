@@ -66,10 +66,10 @@ const AboutSlider = () => {
   `)
 
   return (
-    <div class="slider-container">
+    <div className="slider-container">
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
-          <div class="card" key={slide.node.id}>
+          <div className="card" key={slide.node.id}>
             <Img
               fluid={slide.node.frontmatter.slide_image.childImageSharp.fluid}
               alt="slide-1"

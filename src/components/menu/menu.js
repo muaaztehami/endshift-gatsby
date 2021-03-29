@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react"
 import "./style.scss"
 import { Link } from "gatsby"
@@ -21,13 +22,13 @@ const Menu = ({ changeHeader }) => {
   }
   return (
     <div>
-      <div id="myNav" class="overlay menu-flex-container">
-        <div class="menu-left-box">
-          <div class="menu">
+      <div id="myNav" className="overlay menu-flex-container">
+        <div className="menu-left-box">
+          <div className="menu">
             <Socials />
           </div>
         </div>
-        <div class="overlay-content big-items menu-mid-box">
+        <div className="overlay-content big-items menu-mid-box">
           <ul style={{ listStyleType: `none` }}>
             <li>
               <Link to="/about">About</Link>
@@ -49,9 +50,9 @@ const Menu = ({ changeHeader }) => {
             </li>
           </ul>
         </div>
-        <div class="menu-right-box">
+        <div className="menu-right-box">
           <div
-            class="menu"
+            className="menu"
             // style={{ marginBottom: `30px`, marginLeft: `auto` }}
           >
             <small>Location</small>
@@ -66,8 +67,8 @@ const Menu = ({ changeHeader }) => {
         </div>
       </div>
       <div style={{ display: `flex`, float: `right` }}>
-        <small class="hide" style={{ padding: `7px` }}>
-          LET'S TALK
+        <small className="hide" style={{ padding: `7px` }}>
+          LET&apos;S TALK
         </small>
         <span
           style={{ fontSize: `23px`, cursor: `pointer` }}

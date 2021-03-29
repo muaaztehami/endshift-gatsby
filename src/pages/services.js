@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,11 +18,11 @@ const ServicesPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Services" />
-      <div class="small-container top-container">
-        <div class="space-around">
-          <small class="small-text">OUR SERVICES</small>
-          <h1 class="extra-larg-text bold-text">Our Craft & Expertise</h1>
-          <div class="large-text">
+      <div className="small-container top-container">
+        <div className="space-around">
+          <small className="small-text">OUR SERVICES</small>
+          <h1 className="extra-larg-text bold-text">Our Craft & Expertise</h1>
+          <div className="large-text">
             We are a close team of creative professionals based out of Savannah,
             Georgia. We are passionate about partnering with good people and
             organizations to provide exceptional custom solutions.
@@ -30,28 +31,28 @@ const ServicesPage = ({ data }) => {
       </div>
 
       <div
-        class="mid-scroll-btn scroll-margin-m"
+        className="mid-scroll-btn scroll-margin-m"
         style={{
           marginBottom: `20px`,
         }}
       >
         <button
           type="button"
-          class="btn btn-light btn-align"
+          className="btn btn-light btn-align"
           onClick={scrollDown}
         >
           Scroll down
         </button>
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">
           Our Craft & Expertise
         </div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
-            <p class="bold-text">Discovery & Strategy</p>
+        <div className="flex-container-services">
+          <div className="services-box">
+            <p className="bold-text">Discovery & Strategy</p>
             <small>
               A thoughtful discovery process will help us gain an accurate
               understanding of the breadth and depth of your project so that we
@@ -62,7 +63,7 @@ const ServicesPage = ({ data }) => {
             </small>
             <br />
             <br />
-            <small class="bold-text tags">
+            <small className="bold-text tags">
               <a href="#">Baseline Evaluation</a>
               <a href="#">Research</a>
               <a href="#">Opportunity Analysis and Strategic Planning</a>
@@ -74,16 +75,16 @@ const ServicesPage = ({ data }) => {
             <br />
             <br />
 
-            <p class="bold-text">Branding</p>
+            <p className="bold-text">Branding</p>
             <small>
-              We don't just create logos, we help our partners establish an
+              We don&apos;t just create logos, we help our partners establish an
               all-encompassing brand experience. Cool factor is not the goal --
               we develop brand systems that will generate results and make for
               change.
             </small>
             <br />
             <br />
-            <small class="bold-text tags">
+            <small className="bold-text tags">
               <a href="#">Brand Strategy</a>
               <a href="#">Visual Identity</a>
               <a href="#">Type Design Lettering</a>
@@ -100,16 +101,16 @@ const ServicesPage = ({ data }) => {
       </div>
 
       <div
-        class="space-around"
+        className="space-around"
         style={{
           backgroundColor: `black`,
           color: `white`,
           padding: `1px 0 100px 0px`,
         }}
       >
-        <div class="small-container flex-container">
-          <div class="card-services">
-            <div class="card-img-services">
+        <div className="small-container flex-container">
+          <div className="card-services">
+            <div className="card-img-services">
               <Img
                 fluid={data.slide01ql.childImageSharp.fluid}
                 alt="slide-1"
@@ -117,7 +118,7 @@ const ServicesPage = ({ data }) => {
               />
             </div>
             <div>
-              <p class="bold-text">Interactive</p>
+              <p className="bold-text">Interactive</p>
               <small>
                 We bring brands and products to life on the web by creating
                 interfaces and interactions that make sense. We learn to think
@@ -126,7 +127,7 @@ const ServicesPage = ({ data }) => {
               </small>
               <br />
               <br />
-              <small class="bold-text">
+              <small className="bold-text">
                 Content Strategy, User Experience, Interface Design, Content
                 Design, Information Architecture, User Flow Mapping, Wireframing
                 and Prototyping, Visual Design, Responsive Design, UI Kits and
@@ -134,8 +135,8 @@ const ServicesPage = ({ data }) => {
               </small>
             </div>
           </div>
-          <div class="card-services">
-            <div class="card-img-services">
+          <div className="card-services">
+            <div className="card-img-services">
               <Img
                 fluid={data.slide02ql.childImageSharp.fluid}
                 alt="slide-1"
@@ -143,7 +144,7 @@ const ServicesPage = ({ data }) => {
               />
             </div>
             <div>
-              <p class="bold-text">Interactive</p>
+              <p className="bold-text">Interactive</p>
               <small>
                 We bring brands and products to life on the web by creating
                 interfaces and interactions that make sense. We learn to think
@@ -152,7 +153,7 @@ const ServicesPage = ({ data }) => {
               </small>
               <br />
               <br />
-              <small class="bold-text">
+              <small className="bold-text">
                 Content Strategy, User Experience, Interface Design, Content
                 Design, Information Architecture, User Flow Mapping, Wireframing
                 and Prototyping, Visual Design, Responsive Design, UI Kits and
@@ -163,9 +164,9 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-container flex-container right-box">
-        <div class="card-services big-container-img">
-          <p class="bold-text">Discovery & Statergy</p>
+      <div className="big-container flex-container right-box">
+        <div className="card-services big-container-img">
+          <p className="bold-text">Discovery & Statergy</p>
           <small>
             We bring brands and products to life on the web by creating
             interfaces and interactions that make sense. We learn to think like
@@ -174,7 +175,7 @@ const ServicesPage = ({ data }) => {
           </small>
           <br />
           <br />
-          <small class="bold-text">
+          <small className="bold-text">
             Content Strategy, User Experience, Interface Design, Content Design,
             Information Architecture, User Flow Mapping, Wireframing and
             Prototyping, Visual Design, Responsive Design, UI Kits and Pattern
@@ -182,7 +183,7 @@ const ServicesPage = ({ data }) => {
           </small>
         </div>
 
-        <div class="card-services">
+        <div className="card-services">
           <Img
             fluid={data.slide02ql.childImageSharp.fluid}
             alt="slide-1"
@@ -191,16 +192,16 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-container flex-container-reverse left-box">
-        <div class="card-services">
+      <div className="big-container flex-container-reverse left-box">
+        <div className="card-services">
           <Img
             fluid={data.slide02ql.childImageSharp.fluid}
             alt="slide-1"
             style={{ maxWidth: `100%`, maxHeight: `100%` }}
           />
         </div>
-        <div class="card-services big-container-img">
-          <p class="bold-text">Discovery & Statergy</p>
+        <div className="card-services big-container-img">
+          <p className="bold-text">Discovery & Statergy</p>
           <small>
             We bring brands and products to life on the web by creating
             interfaces and interactions that make sense. We learn to think like
@@ -209,7 +210,7 @@ const ServicesPage = ({ data }) => {
           </small>
           <br />
           <br />
-          <small class="bold-text">
+          <small className="bold-text">
             Content Strategy, User Experience, Interface Design, Content Design,
             Information Architecture, User Flow Mapping, Wireframing and
             Prototyping, Visual Design, Responsive Design, UI Kits and Pattern
@@ -218,7 +219,7 @@ const ServicesPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-picture space-around">
+      <div className="big-picture space-around">
         <Img
           fluid={sources}
           alt="slide-1"
@@ -226,11 +227,11 @@ const ServicesPage = ({ data }) => {
         />
       </div>
 
-      <div class="small-container bold-text">
-        <div class="large-text">Need Interactive Services?</div>
-        <hr class="space-around" />
-        <button type="button" class="btn btn-light btn-align">
-          Let's chat about your needs.
+      <div className="small-container bold-text">
+        <div className="large-text">Need Interactive Services?</div>
+        <hr className="space-around" />
+        <button type="button" className="btn btn-light btn-align">
+          Let&apos;s chat about your needs.
         </button>
       </div>
     </Layout>

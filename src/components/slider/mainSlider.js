@@ -53,10 +53,10 @@ const MainSlider = () => {
   `)
 
   return (
-    <div class="big-slider-container">
+    <div className="big-slider-container">
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
-          <div class="big-card" key={slide.node.id}>
+          <div className="big-card" key={slide.node.id}>
             <Img
               fluid={[
                 slide.node.frontmatter.slide_image_desktop.childImageSharp

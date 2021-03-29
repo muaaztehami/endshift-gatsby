@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -28,19 +29,19 @@ const ContactUsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Services" />
-      <div class="small-container top-container">
-        <div class="space-around">
-          <small class="small-text">CONTACT US</small>
-          <h1 class="extra-larg-text bold-text">Let's Chat</h1>
-          <div class="large-text">
+      <div className="small-container top-container">
+        <div className="space-around">
+          <small className="small-text">CONTACT US</small>
+          <h1 className="extra-larg-text bold-text">Let&apos;s Chat</h1>
+          <div className="large-text">
             Fill this out so we can learn more about you and your needs.
           </div>
         </div>
       </div>
 
-      <div class="flex-container-reverse" style={{ marginTop: `40px` }}>
+      <div className="flex-container-reverse" style={{ marginTop: `40px` }}>
         <div
-          class="flex-container small-container"
+          className="flex-container small-container"
           style={{ margin: `0 0 0 auto` }}
         >
           <TextField
@@ -87,16 +88,16 @@ const ContactUsPage = ({ data }) => {
           />
           <button
             type="button"
-            class="btn btn-light submit-btn space-around"
+            className="btn btn-light submit-btn space-around"
             style={{ marginRight: `auto` }}
           >
             Submit
           </button>
         </div>
-        <div class="side-scroll-btn-contact">
+        <div className="side-scroll-btn-contact">
           <button
             type="button"
-            class="btn btn-light btn-align"
+            className="btn btn-light btn-align"
             onClick={scrollDown}
           >
             Scroll down
@@ -104,7 +105,7 @@ const ContactUsPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-picture space-around">
+      <div className="big-picture space-around">
         <Img
           fluid={sources}
           alt="slide-1"

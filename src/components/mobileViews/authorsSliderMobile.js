@@ -31,10 +31,10 @@ const AuthorsSliderMobile = () => {
   `)
 
   return (
-    <div class="small-container">
+    <div className="small-container">
       {data.allMarkdownRemark.edges.map(slide => (
-        <div class="author-card" key={slide.node.id}>
-          <div class="card-image" style={{ textAlign: `center` }}>
+        <div className="author-card" key={slide.node.id}>
+          <div className="card-image" style={{ textAlign: `center` }}>
             <div style={{ height: `fit-content` }}>
               <Img
                 fluid={slide.node.frontmatter.slide_image.childImageSharp.fluid}

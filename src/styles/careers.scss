@@ -17,7 +17,7 @@
 
   @media screen and (max-width: 480px) {
     #wrapper {
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       height: 100px;
     }
     .center {
@@ -25,13 +25,13 @@
       order: 3;
       margin: 10px 0;
     }
-  
+
     .left {
       width: 50%;
     }
     .right {
-      width:50%;
-      order:2;
+      width: 50%;
+      order: 2;
     }
     .content {
       padding: 0;
@@ -45,16 +45,22 @@
   div.box-left {
     width: 46%;
     margin: 5px;
-    @media screen and (max-width: 480px) {width: 100%;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
   div.box-right {
     width: 50%;
     margin: 5px;
-    @media screen and (max-width: 480px) {width: 100%;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
 
 .left-padding {
   padding-left: 10%;
-  @media screen and (max-width: 480px) {padding-left: 0%;}
+  @media screen and (max-width: 480px) {
+    padding-left: 0%;
+  }
 }

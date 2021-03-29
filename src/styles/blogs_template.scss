@@ -11,5 +11,7 @@
   left: 37%;
   color: black;
   transform: translate(-50%, -50%);
-  @media screen and (max-width: 480px) {left: 37%;}
+  @media screen and (max-width: 480px) {
+    left: 37%;
+  }
 }

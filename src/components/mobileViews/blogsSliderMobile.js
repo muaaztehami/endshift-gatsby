@@ -25,12 +25,16 @@ const BlogsSliderMobile = () => {
   `)
 
   return (
-    <div class="small-container">
+    <div className="small-container">
       <hr />
       <div>
         {data.allMarkdownRemark.edges.map((blogs, index) => (
-          <Link to={blogs.node.fields.slug} class="link-style">
-            <div class="flex-container space-around" key={blogs.node.id}>
+          <Link
+            to={blogs.node.fields.slug}
+            class="link-style"
+            key={blogs.node.id}
+          >
+            <div className="flex-container space-around">
               <div
                 style={{
                   width: `10%`,
@@ -43,7 +47,7 @@ const BlogsSliderMobile = () => {
                 {index + 1}
               </div>
               <div style={{ width: `90%` }}>
-                <p class="bold-text" style={{ margin: `0` }}>
+                <p className="bold-text" style={{ margin: `0` }}>
                   {blogs.node.frontmatter.title}
                 </p>
                 <small>

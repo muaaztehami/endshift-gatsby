@@ -47,11 +47,11 @@ const AuthorsSlider = () => {
   `)
 
   return (
-    <div class="slider-container">
+    <div className="slider-container">
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
-          <div class="card" key={slide.node.id}>
-            <div class="card-image">
+          <div className="card" key={slide.node.id}>
+            <div className="card-image">
               <div style={{ height: `fit-content` }}>
                 <Img
                   fluid={

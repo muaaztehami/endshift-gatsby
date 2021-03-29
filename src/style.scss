@@ -331,12 +331,16 @@ a:focus {
 
 .large-text {
   font-size: 28px;
-  @media screen and (max-width: 480px) {font-size: 22px;}
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
 }
 
 .extra-larg-text {
   font-size: 55px;
-  @media screen and (max-width: 480px) {font-size: 45px;}
+  @media screen and (max-width: 480px) {
+    font-size: 45px;
+  }
 }
 
 .bold-text {
@@ -355,11 +359,15 @@ a:focus {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @media screen and (max-width: 480px) {justify-content: center;}
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+  }
   div.box {
     width: 48%;
     margin: 5px;
-    @media screen and (max-width: 480px) {width: 84%;}
+    @media screen and (max-width: 480px) {
+      width: 84%;
+    }
   }
   div.footer {
     width: 150px;
@@ -371,29 +379,45 @@ a:focus {
     }
   }
   .sites {
-    @media screen and (max-width: 480px) {width: 45% !important; order: 1}
+    @media screen and (max-width: 480px) {
+      width: 45% !important;
+      order: 1;
+    }
   }
-  .socials  {
-    @media screen and (max-width: 480px) {width: 20% !important; order: 2}
+  .socials {
+    @media screen and (max-width: 480px) {
+      width: 20% !important;
+      order: 2;
+    }
   }
-  .address  {
-    @media screen and (max-width: 480px) {padding-right: 36%; order: 3}
+  .address {
+    @media screen and (max-width: 480px) {
+      padding-right: 36%;
+      order: 3;
+    }
   }
-  .company  {
-    @media screen and (max-width: 480px) {order: 4}
+  .company {
+    @media screen and (max-width: 480px) {
+      order: 4;
+    }
   }
   div.card {
     border: none;
     width: 35%;
     margin-top: 70px;
     margin-inline-end: 50px;
-    @media screen and (max-width: 480px) {width: 100%; margin-inline-end: 0px; margin-top: 37px;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      margin-inline-end: 0px;
+      margin-top: 37px;
+    }
   }
   div.card:nth-child(even) {
     margin-top: 150px;
-    @media screen and (max-width: 480px) {margin-top: 37px;}
+    @media screen and (max-width: 480px) {
+      margin-top: 37px;
+    }
   }
-  
 }
 
 .card-image {
@@ -431,15 +455,15 @@ a:focus {
 
 .big-picture {
   width: 100%;
-  height:fit-content
+  height: fit-content;
 }
 
 .link-style {
-  
   text-decoration: none;
   color: black;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: black;
     text-decoration: none;
   }
@@ -451,7 +475,9 @@ small {
 
 .small-screen {
   display: none;
-  @media screen and (max-width: 480px) {display:block;}
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
 }
 
 .flex-container-reverse {
@@ -459,16 +485,20 @@ small {
   justify-content: space-between;
   flex-wrap: wrap;
   @media screen and (max-width: 480px) {
-    flex-wrap:wrap-reverse;
+    flex-wrap: wrap-reverse;
   }
   div.box {
     width: 48%;
     margin: 5px;
-    @media screen and (max-width: 480px) {width: 84%;}
+    @media screen and (max-width: 480px) {
+      width: 84%;
+    }
   }
   .small-container {
     width: 82%;
-    @media screen and (max-width: 480px) {width: 100%;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
 
@@ -488,27 +518,45 @@ button:focus {
   width: 17.1%;
   padding-left: 8%;
   padding-top: 67px;
-  @media screen and (max-width: 480px) {width: 100%; padding: 0; text-align: center; margin-bottom: 10px;}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 .side-scroll-btn-contact {
   width: 17.1%;
   padding-left: 8%;
   padding-top: 167px;
-  @media screen and (max-width: 480px) {width: 100%; padding: 0; text-align: center; margin-bottom: 10px; margin-top: 80px}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 80px;
+  }
 }
 .mid-scroll-btn {
   margin-left: auto;
   width: 9%;
-  @media screen and (max-width: 480px) {width: 100%; text-align: center;}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .scroll-margin-m {
   margin-top: 124px;
-  @media screen and (max-width: 480px) {margin-top: 0}
+  @media screen and (max-width: 480px) {
+    margin-top: 0;
+  }
 }
 .scroll-margin-l {
   margin-top: 165px;
-  @media screen and (max-width: 480px) {margin-top: 0}
+  @media screen and (max-width: 480px) {
+    margin-top: 0;
+  }
 }
 /* Media queries */
 

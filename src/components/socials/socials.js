@@ -4,8 +4,8 @@ import "./style.scss"
 
 const Socials = () => {
   return (
-    <div class="socials-flex-container">
-      <small class="title">Social</small>
+    <div className="socials-flex-container">
+      <small className="title">Social</small>
       <small>
         <Link
           to="#"

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,16 +19,16 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div class="small-container top-container">
-        <div class="space-around">
-          <small class="small-text">WE ARE ENDSHIFT</small>
-          <h1 class="extra-larg-text bold-text">Solutions by design</h1>
-          <div class="large-text">
+      <div className="small-container top-container">
+        <div className="space-around">
+          <small className="small-text">WE ARE ENDSHIFT</small>
+          <h1 className="extra-larg-text bold-text">Solutions by design</h1>
+          <div className="large-text">
             We build identities and experiences to elevate and empower
             organizations.
           </div>
         </div>
-        <div class="space-around">
+        <div className="space-around">
           <Link
             to="/contact_us"
             style={{
@@ -39,9 +40,9 @@ const IndexPage = ({ data }) => {
           </Link>
         </div>
       </div>
-      <div class="flex-container-reverse">
+      <div className="flex-container-reverse">
         <div
-          class="small-container full-image"
+          className="small-container full-image"
           style={{ margin: `0 0 0 auto` }}
         >
           <div style={{ maxWidth: `100%`, marginBottom: `1.45rem` }}>
@@ -52,31 +53,31 @@ const IndexPage = ({ data }) => {
             />
           </div>
         </div>
-        <div class="side-scroll-btn">
+        <div className="side-scroll-btn">
           <button
             type="button"
-            class="btn btn-light btn-align"
+            className="btn btn-light btn-align"
             onClick={scrollDown}
           >
             Scroll down
           </button>
         </div>
       </div>
-      <div class="small-container">
-        <div class="space-around">
-          <small class="small-text">WHAT WE DO</small>
-          <div class="large-text bold-text mdeium-text-box">
-            Let's Build Something Great. Together.
+      <div className="small-container">
+        <div className="space-around">
+          <small className="small-text">WHAT WE DO</small>
+          <div className="large-text bold-text mdeium-text-box">
+            Let&apos;s Build Something Great. Together.
           </div>
         </div>
         <hr />
-        <div class="flex-container-reverse">
-          <div class="box">
-            <button type="button" class="btn btn-light btn-align">
+        <div className="flex-container-reverse">
+          <div className="box">
+            <button type="button" className="btn btn-light btn-align">
               Learn more
             </button>
           </div>
-          <div class="box">
+          <div className="box">
             <small>
               Dolore ut ipsum deserunt amet non nisi eu do irure eu eiusmod sit
               laborum. Nisi velit fugiat culpa proident commodo occaecat
@@ -88,16 +89,16 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
 
-        <div class="flex-container space-around">
-          <div class="card mobile-card">
-            <div class="card-image">
+        <div className="flex-container space-around">
+          <div className="card mobile-card">
+            <div className="card-image">
               <Img
                 fluid={data.card_image.childImageSharp.fluid}
                 alt="slide-1"
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <div class="flex-container" style={{ marginTop: `20px` }}>
+            <div className="flex-container" style={{ marginTop: `20px` }}>
               <div
                 style={{
                   width: `10%`,
@@ -109,21 +110,21 @@ const IndexPage = ({ data }) => {
                 01
               </div>
               <div style={{ width: `90%` }}>
-                <p class="bold-text p-style">V-art Gallery</p>
+                <p className="bold-text p-style">V-art Gallery</p>
                 <small>[Websites][Branding & Brand Identity]</small>
               </div>
             </div>
           </div>
 
-          <div class="card mobile-card">
-            <div class="card-image">
+          <div className="card mobile-card">
+            <div className="card-image">
               <Img
                 fluid={data.card_image.childImageSharp.fluid}
                 alt="slide-1"
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <div class="flex-container" style={{ marginTop: `20px` }}>
+            <div className="flex-container" style={{ marginTop: `20px` }}>
               <div
                 style={{
                   width: `10%`,
@@ -135,21 +136,21 @@ const IndexPage = ({ data }) => {
                 02
               </div>
               <div style={{ width: `90%` }}>
-                <p class="bold-text p-style">V-art Gallery</p>
+                <p className="bold-text p-style">V-art Gallery</p>
                 <small>[Websites][Branding & Brand Identity]</small>
               </div>
             </div>
           </div>
 
-          <div class="card mobile-card">
-            <div class="card-image">
+          <div className="card mobile-card">
+            <div className="card-image">
               <Img
                 fluid={data.card_image.childImageSharp.fluid}
                 alt="slide-1"
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <div class="flex-container" style={{ marginTop: `20px` }}>
+            <div className="flex-container" style={{ marginTop: `20px` }}>
               <div
                 style={{
                   width: `10%`,
@@ -161,21 +162,21 @@ const IndexPage = ({ data }) => {
                 03
               </div>
               <div style={{ width: `90%` }}>
-                <p class="bold-text p-style">V-art Gallery</p>
+                <p className="bold-text p-style">V-art Gallery</p>
                 <small>[Websites][Branding & Brand Identity]</small>
               </div>
             </div>
           </div>
 
-          <div class="card mobile-card">
-            <div class="card-image">
+          <div className="card mobile-card">
+            <div className="card-image">
               <Img
                 fluid={data.card_image.childImageSharp.fluid}
                 alt="slide-1"
                 style={{ maxWidth: `100%`, maxHeight: `100%` }}
               />
             </div>
-            <div class="flex-container" style={{ marginTop: `20px` }}>
+            <div className="flex-container" style={{ marginTop: `20px` }}>
               <div
                 style={{
                   width: `10%`,
@@ -187,7 +188,7 @@ const IndexPage = ({ data }) => {
                 04
               </div>
               <div style={{ width: `90%` }}>
-                <p class="bold-text p-style">V-art Gallery</p>
+                <p className="bold-text p-style">V-art Gallery</p>
                 <small>[Websites][Branding & Brand Identity]</small>
               </div>
             </div>
@@ -196,27 +197,27 @@ const IndexPage = ({ data }) => {
       </div>
       <div
         style={{ backgroundColor: `grey`, padding: `100px 0px` }}
-        class="space-around"
+        className="space-around"
       >
-        <div class="small-container footer" style={{ marginTop: 0 }}>
+        <div className="small-container footer" style={{ marginTop: 0 }}>
           <div>
-            <small class="small-text">WHAT WE DO</small>
-            <div class="large-text bold-text mdeium-text-box">
+            <small className="small-text">WHAT WE DO</small>
+            <div className="large-text bold-text mdeium-text-box">
               From the Inside Out.
             </div>
           </div>
           <hr />
-          <div class="flex-container-reverse">
-            <div class="box">
+          <div className="flex-container-reverse">
+            <div className="box">
               <button
                 type="button"
-                class="btn btn-light btn-align"
+                className="btn btn-light btn-align"
                 style={{ color: `white` }}
               >
                 Learn more
               </button>
             </div>
-            <div class="box">
+            <div className="box">
               <small>
                 Our team and our culture is fueled by passion: for what we do,
                 for the people we do it for, and for the people we work
@@ -225,27 +226,27 @@ const IndexPage = ({ data }) => {
               </small>
               <br />
               <br />
-              <p class="bold-text">Discovery & Strategy</p>
-              <p class="bold-text">Branding</p>
-              <p class="bold-text">Interactive</p>
-              <p class="bold-text">Creative</p>
-              <p class="bold-text">Development Solutions</p>
+              <p className="bold-text">Discovery & Strategy</p>
+              <p className="bold-text">Branding</p>
+              <p className="bold-text">Interactive</p>
+              <p className="bold-text">Creative</p>
+              <p className="bold-text">Development Solutions</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="small-container">
+      <div className="small-container">
         <div>
-          <small class="small-text">NEWS + VIEWS</small>
-          <div class="large-text bold-text mdeium-text-box">
+          <small className="small-text">NEWS + VIEWS</small>
+          <div className="large-text bold-text mdeium-text-box">
             Recent agency happenings, press.
           </div>
         </div>
       </div>
-      <div class="big-screen">
+      <div className="big-screen">
         <BlogsSlider />
       </div>
-      <div class="small-screen">
+      <div className="small-screen">
         <BlogsSliderMobile />
       </div>
     </Layout>

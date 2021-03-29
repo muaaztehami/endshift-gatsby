@@ -11,14 +11,18 @@
   left: 30%;
   color: black;
   transform: translate(-50%, -50%);
-  @media screen and (max-width: 480px) {left: 37%;}
+  @media screen and (max-width: 480px) {
+    left: 37%;
+  }
 }
-
 
 .flex-container div.card-case-study {
   border: none;
   width: 49%;
-  @media screen and (max-width: 480px) {width: 100%; margin-bottom: 1.45rem;}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 1.45rem;
+  }
 }
 
 .card-img-case-study {
@@ -31,5 +35,7 @@
   position: absolute;
   top: 95%;
   left: 90%;
-  @media screen and (max-width: 480px) {left: 38%;}
+  @media screen and (max-width: 480px) {
+    left: 38%;
+  }
 }

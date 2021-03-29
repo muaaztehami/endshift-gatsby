@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,27 +34,27 @@ const CaseStudyPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div class="container">
+      <div className="container">
         <Img
           fluid={sources_background_image}
           alt="slide-1"
           style={{ width: `100%`, height: `100%`, opacity: `0.5` }}
         />
-        <div class="centered">
-          <div class="space-around">
-            <small class="small-text">MOBILE APPLICATION</small>
-            <h1 class="extra-larg-text bold-text">Outreach</h1>
+        <div className="centered">
+          <div className="space-around">
+            <small className="small-text">MOBILE APPLICATION</small>
+            <h1 className="extra-larg-text bold-text">Outreach</h1>
           </div>
-          <div class="space-around">
-            <button type="button" class="btn btn-light btn-align">
+          <div className="space-around">
+            <button type="button" className="btn btn-light btn-align">
               Launch project
             </button>
           </div>
         </div>
-        <div class="case-study-scroll-btn">
+        <div className="case-study-scroll-btn">
           <button
             type="button"
-            class="btn btn-light btn-align"
+            className="btn btn-light btn-align"
             onClick={scrollDown}
           >
             Scroll down
@@ -61,11 +62,13 @@ const CaseStudyPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">The Challenge</div>
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">
+          The Challenge
+        </div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
+        <div className="flex-container-services">
+          <div className="services-box">
             <small>
               Outreach needed to re-energize an industry-leading sales
               engagement platform and promote a fun company culture. In a
@@ -77,12 +80,12 @@ const CaseStudyPage = ({ data }) => {
             </small>
             <br />
             <br />
-            <p class="bold-text">Go-to-Market Strategy</p>
-            <p class="bold-text">Brand Strategy</p>
-            <p class="bold-text">Brand Design</p>
-            <p class="bold-text">Packaging Design</p>
-            <p class="bold-text">Website Design</p>
-            <p class="bold-text">360 Marketing Development</p>
+            <p className="bold-text">Go-to-Market Strategy</p>
+            <p className="bold-text">Brand Strategy</p>
+            <p className="bold-text">Brand Design</p>
+            <p className="bold-text">Packaging Design</p>
+            <p className="bold-text">Website Design</p>
+            <p className="bold-text">360 Marketing Development</p>
           </div>
         </div>
       </div>
@@ -91,11 +94,11 @@ const CaseStudyPage = ({ data }) => {
         <MainSlider />
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">Our Approach</div>
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">Our Approach</div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
+        <div className="flex-container-services">
+          <div className="services-box">
             <small>
               Nearly every member of the team lent their magic to this project,
               which required a long, expertly managed project timeline. Not only
@@ -109,7 +112,7 @@ const CaseStudyPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="big-picture space-around">
+      <div className="big-picture space-around">
         <Img
           fluid={sources_big_picture}
           alt="slide-1"
@@ -117,23 +120,23 @@ const CaseStudyPage = ({ data }) => {
         />
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">Branding</div>
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">Branding</div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
+        <div className="flex-container-services">
+          <div className="services-box">
             <small>
               Great work has a purpose, it solves a problem, it creates ways for
-              people to connect. If it wins awards or if other people think it's
-              cool then that's nice, we do it. We do it because it has impact,
-              it helps someone, it makes their lives easier or better or just
-              more fun.
+              people to connect. If it wins awards or if other people think
+              it&apos;s cool then that&apos;s nice, we do it. We do it because
+              it has impact, it helps someone, it makes their lives easier or
+              better or just more fun.
             </small>
           </div>
         </div>
 
         <div
-          class="space-around"
+          className="space-around"
           style={{
             maxWidth: `100%`,
             height: "fit-content",
@@ -147,9 +150,9 @@ const CaseStudyPage = ({ data }) => {
           />
         </div>
 
-        <div class="flex-container">
-          <div class="card-case-study">
-            <div class="card-img-case-study">
+        <div className="flex-container">
+          <div className="card-case-study">
+            <div className="card-img-case-study">
               <Img
                 fluid={data.banner_image_2.childImageSharp.fluid}
                 alt="slide-1"
@@ -157,8 +160,8 @@ const CaseStudyPage = ({ data }) => {
               />
             </div>
           </div>
-          <div class="card-case-study">
-            <div class="card-img-case-study">
+          <div className="card-case-study">
+            <div className="card-img-case-study">
               <Img
                 fluid={data.banner_image_2.childImageSharp.fluid}
                 alt="slide-1"
@@ -169,11 +172,13 @@ const CaseStudyPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">Communications</div>
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">
+          Communications
+        </div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
+        <div className="flex-container-services">
+          <div className="services-box">
             <small>
               Nearly every member of the team lent their magic to this project,
               which required a long, expertly managed project timeline. Not only
@@ -188,28 +193,30 @@ const CaseStudyPage = ({ data }) => {
       </div>
 
       <div
-        class="small-container"
+        className="small-container"
         style={{ backgroundColor: `black`, padding: `70px` }}
       >
         <div
-          class="space-around"
+          className="space-around"
           style={{ textAlign: `center`, color: `white` }}
         >
           <p>
-            "We believe that we can live in a world where every product or
+            &quot;We believe that we can live in a world where every product or
             service has an easy to use experience on all platforms. And our
-            mission is to make it happen."
+            mission is to make it happen.&quot;
           </p>
           <p style={{ fontWeight: `bold` }}>Tomislav Grubisic</p>
           <small>CEO</small>
         </div>
       </div>
 
-      <div class="small-container ">
-        <div class="large-text bold-text mdeium-text-box">Communications</div>
+      <div className="small-container ">
+        <div className="large-text bold-text mdeium-text-box">
+          Communications
+        </div>
         <hr />
-        <div class="flex-container-services">
-          <div class="services-box">
+        <div className="flex-container-services">
+          <div className="services-box">
             <small>
               Nearly every member of the team lent their magic to this project,
               which required a long, expertly managed project timeline. Not only
@@ -234,11 +241,11 @@ const CaseStudyPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container">
-        <div class="large-text bold-text">Need Interactive Services?</div>
-        <hr class="space-around" />
-        <button type="button" class="btn btn-light btn-align">
-          Let's chat about your needs.
+      <div className="small-container">
+        <div className="large-text bold-text">Need Interactive Services?</div>
+        <hr className="space-around" />
+        <button type="button" className="btn btn-light btn-align">
+          Let&apos;s chat about your needs.
         </button>
       </div>
     </Layout>

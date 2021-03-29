@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -25,15 +26,15 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div class="container">
+      <div className="container">
         <Img
           fluid={sources}
           alt="slide-1"
           style={{ width: `100%`, height: `100%`, opacity: `0.5` }}
         />
-        <div class="centered">
-          <div class="space-around">
-            <h1 class="large-text bold-text">{post.frontmatter.title}</h1>
+        <div className="centered">
+          <div className="space-around">
+            <h1 className="large-text bold-text">{post.frontmatter.title}</h1>
           </div>
         </div>
       </div>
@@ -60,8 +61,8 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
       </div> */}
 
-      <div class="small-container">
-        <div class="space-around">
+      <div className="small-container">
+        <div className="space-around">
           <article
             className="blog-post"
             itemScope

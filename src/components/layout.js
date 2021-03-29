@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Header from "./header/header"
 import Footer from "./footer"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,12 +20,12 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata.title || `Title`} />
 
       <div>
         <main>{children}</main>
       </div>
-      <Footer siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Footer siteTitle={data.site.siteMetadata.title || `Title`} />
     </div>
   )
 }

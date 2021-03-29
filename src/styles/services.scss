@@ -1,4 +1,4 @@
-.tags a{
+.tags a {
   color: black;
   padding-inline-end: 5px;
   text-decoration: underline;
@@ -8,27 +8,34 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  @media screen and (max-width: 480px) {justify-content: center;}
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+  }
   div.services-box {
     border: none;
     width: 48%;
-    @media screen and (max-width: 480px) {width: 84%;}
+    @media screen and (max-width: 480px) {
+      width: 84%;
+    }
   }
 }
-
 
 .flex-container div.card-services {
   border: none;
   width: 48%;
   margin: 50px 5px;
-  @media screen and (max-width: 480px) {width: 100%;}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 .flex-container-reverse div.card-services {
   border: none;
   width: 48%;
   margin: 50px 5px;
-  @media screen and (max-width: 480px) {width: 100%;}
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 .card-img-services {
@@ -39,7 +46,9 @@
 .big-container {
   max-width: 80%;
   margin: 150px 0;
-  @media screen and (max-width: 480px) {margin: 0;}
+  @media screen and (max-width: 480px) {
+    margin: 0;
+  }
 }
 
 .big-container-img {
@@ -50,10 +59,14 @@
 
 .right-box {
   margin-left: auto;
-  @media screen and (max-width: 480px) {margin: auto;}
+  @media screen and (max-width: 480px) {
+    margin: auto;
+  }
 }
 
 .left-box {
   margin-right: auto;
-  @media screen and (max-width: 480px) {margin: auto;}
+  @media screen and (max-width: 480px) {
+    margin: auto;
+  }
 }

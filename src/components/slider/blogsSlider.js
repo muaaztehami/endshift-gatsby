@@ -52,12 +52,12 @@ const BlogsSlider = () => {
   `)
 
   return (
-    <div class="slider-container">
+    <div className="slider-container">
       <Slider {...settings}>
         {data.allMarkdownRemark.edges.map(slide => (
-          <div key={slide.node.id} class="card">
-            <a href={slide.node.fields.slug} class="link-style">
-              <div class="blog-card-image">
+          <div key={slide.node.id} className="card">
+            <a href={slide.node.fields.slug} className="link-style">
+              <div className="blog-card-image">
                 <Img
                   fluid={
                     slide.node.frontmatter.cover_image.childImageSharp.fluid
@@ -66,7 +66,7 @@ const BlogsSlider = () => {
                   style={{ maxWidth: `100%`, maxHeight: `100%` }}
                 />
               </div>
-              <p class="bold-text">{slide.node.frontmatter.title}</p>
+              <p className="bold-text">{slide.node.frontmatter.title}</p>
               <small>
                 {dispplayDate(new Date(slide.node.frontmatter.date))}
               </small>

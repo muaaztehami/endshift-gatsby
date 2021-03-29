@@ -1,17 +1,28 @@
 .medium-container {
   max-width: 80%;
   margin-right: auto;
-  @media screen and (max-width: 480px) {margin: auto; max-width: 100%;}
+  @media screen and (max-width: 480px) {
+    margin: auto;
+    max-width: 100%;
+  }
 }
 
 .top-box {
   margin-bottom: 200px;
-  @media screen and (max-width: 480px) {margin: auto; margin-bottom: 80px; max-width: 80%;}
+  @media screen and (max-width: 480px) {
+    margin: auto;
+    margin-bottom: 80px;
+    max-width: 80%;
+  }
 }
 
 .bottom-box {
   margin-top: 200px;
-  @media screen and (max-width: 480px) {margin: auto; margin-top: 80px;  max-width: 80%;}
+  @media screen and (max-width: 480px) {
+    margin: auto;
+    margin-top: 80px;
+    max-width: 80%;
+  }
 }
 
 .side-image {
@@ -25,18 +36,24 @@
   .about-box {
     width: 48%;
     margin: 5px;
-    @media screen and (max-width: 480px) {width: 100%; margin: 0;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      margin: 0;
+    }
   }
   div.small-box {
-
     width: 33.33%;
-    @media screen and (max-width: 480px) {width: 100%;}
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
 .svg-container {
   width: 100px;
   height: 100px;
-  @media screen and (max-width: 480px) {width: 33%;}
+  @media screen and (max-width: 480px) {
+    width: 33%;
+  }
 }
 
 .svg-img {

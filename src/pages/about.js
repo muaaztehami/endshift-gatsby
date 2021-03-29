@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,11 +17,11 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <div class="small-container top-container">
-        <div class="space-around">
-          <small class="small-text">OUR STORY</small>
-          <h1 class="extra-larg-text bold-text">The Story of Us</h1>
-          <div class="large-text">
+      <div className="small-container top-container">
+        <div className="space-around">
+          <small className="small-text">OUR STORY</small>
+          <h1 className="extra-larg-text bold-text">The Story of Us</h1>
+          <div className="large-text">
             We are a close team of creative professionals based out of Savannah,
             Georgia. We are passionate about partnering with good people and
             organizations to provide exceptional custom solutions.
@@ -29,14 +30,14 @@ const AboutPage = ({ data }) => {
       </div>
 
       <div
-        class="mid-scroll-btn scroll-margin-m"
+        className="mid-scroll-btn scroll-margin-m"
         style={{
           marginBottom: `20px`,
         }}
       >
         <button
           type="button"
-          class="btn btn-light btn-align"
+          className="btn btn-light btn-align"
           onClick={scrollDown}
         >
           Scroll down
@@ -49,27 +50,27 @@ const AboutPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container" style={{ maxWidth: `550px` }}>
-        <div class="space-around" style={{ textAlign: `center` }}>
+      <div className="small-container" style={{ maxWidth: `550px` }}>
+        <div className="space-around" style={{ textAlign: `center` }}>
           <p>
-            "We believe that we can live in a world where every product or
+            &quot;We believe that we can live in a world where every product or
             service has an easy to use experience on all platforms. And our
-            mission is to make it happen."
+            mission is to make it happen.&quot;
           </p>
           <p style={{ fontWeight: `bold` }}>Tomislav Grubisic</p>
           <small>CEO</small>
         </div>
       </div>
 
-      <div class="small-container">
-        <div class="space-around">
-          <div class="large-text bold-text mdeium-text-box">What We Do</div>
+      <div className="small-container">
+        <div className="space-around">
+          <div className="large-text bold-text mdeium-text-box">What We Do</div>
           <hr />
         </div>
       </div>
 
-      <div class="medium-container flex-container">
-        <div class="about-box hide" style={{ alignSelf: `flex-end` }}>
+      <div className="medium-container flex-container">
+        <div className="about-box hide" style={{ alignSelf: `flex-end` }}>
           <div style={{ height: `60%` }}>
             <Img
               fluid={data.sideimg.childImageSharp.fluid}
@@ -81,9 +82,9 @@ const AboutPage = ({ data }) => {
             />
           </div>
         </div>
-        <div class="about-box">
-          <div class="top-box">
-            <p class="bold-text">We dont't design in a vacuum.</p>
+        <div className="about-box">
+          <div className="top-box">
+            <p className="bold-text">We don&apos;t design in a vacuum.</p>
             <small>
               Customer experiences are comprised of multiple channels,
               touchpoints, interactions and emotions. Our approach considers and
@@ -96,7 +97,7 @@ const AboutPage = ({ data }) => {
             <br />
             <br />
             <br />
-            <p class="bold-text">
+            <p className="bold-text">
               We engage with dedicated, multidisciplinary A-teams.
             </p>
             <small>
@@ -111,16 +112,16 @@ const AboutPage = ({ data }) => {
             <br />
             <br />
             <br />
-            <p class="bold-text">We focus on immediate, tactical results</p>
+            <p className="bold-text">We focus on immediate, tactical results</p>
             <small>
-              To stay competitive in today's world, you must quickly and
+              To stay competitive in today&apos;s world, you must quickly and
               intelligently--always be shipping. Rapid prototyping, testing and
               implementation cycles paired with deep user, market and technology
               research allows us the ability to continuously deliver while
               always keeping an eye on the long-term vision.
             </small>
           </div>
-          <div class="small-screen" style={{ height: `fit-content` }}>
+          <div className="small-screen" style={{ height: `fit-content` }}>
             <Img
               fluid={data.sideimg.childImageSharp.fluid}
               alt="slide-1"
@@ -130,10 +131,10 @@ const AboutPage = ({ data }) => {
               }}
             />
           </div>
-          <div class="bottom-box">
-            <p class="bold-text">
-              We're human-centered. an approach that extends from end users to
-              corporate culture.
+          <div classNaem="bottom-box">
+            <p className="bold-text">
+              We&apos;re human-centered. an approach that extends from end users
+              to corporate culture.
             </p>
             <small>
               The ultimate success of any objective is driven by the people
@@ -141,39 +142,39 @@ const AboutPage = ({ data }) => {
               first when making decisions, creating interactions and building
               systems. We spend as much time understanding the environments,
               needs and behaviors of end consumers as we do plotting the
-              work-lives and perspectives of the people powering our clients'
-              organizations.
+              work-lives and perspectives of the people powering our
+              clients&apos; organizations.
             </small>
             <br />
             <br />
             <br />
-            <p class="bold-text">
+            <p className="bold-text">
               We craft beauty and delight from the brand to the micro-moment.
             </p>
             <small>
               The progressive, beautiful and delightful aesthetics we create are
-              key differentiators for our B2C and B2B clients in today's overly
-              saturated digital landscape. We pride ourselves in having some of
-              the best visual designers, motion artists, and conetnt creators in
-              the industry.
+              key differentiators for our B2C and B2B clients in today&apos;s
+              overly saturated digital landscape. We pride ourselves in having
+              some of the best visual designers, motion artists, and conetnt
+              creators in the industry.
             </small>
           </div>
         </div>
       </div>
 
-      <div class="small-container">
-        <div class="space-around flex-container">
-          <div class="small-box">
+      <div className="small-container">
+        <div className="space-around flex-container">
+          <div className="small-box">
             <p>People</p>
-            <p class="extra-larg-text bold-text">50</p>
+            <p className="extra-larg-text bold-text">50</p>
           </div>
-          <div class="small-box">
+          <div className="small-box">
             <p>Projects</p>
-            <p class="extra-larg-text bold-text">500+</p>
+            <p className="extra-larg-text bold-text">500+</p>
           </div>
-          <div class="small-box">
+          <div className="small-box">
             <p>Founded in</p>
-            <p class="extra-larg-text bold-text">2009+</p>
+            <p className="extra-larg-text bold-text">2009+</p>
           </div>
         </div>
       </div>
@@ -182,37 +183,37 @@ const AboutPage = ({ data }) => {
         <MainSlider />
       </div>
 
-      <div class="small-container">
-        <div class="large-text bold-text mdeium-text-box">Our Clients</div>
+      <div className="small-container">
+        <div className="large-text bold-text mdeium-text-box">Our Clients</div>
         <hr />
-        <div class="flex-container">
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+        <div className="flex-container">
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
-          <div class="svg-container">
-            <img src={svgs} alt="client-svg" class="svg-img" />
+          <div className="svg-container">
+            <img src={svgs} alt="client-svg" className="svg-img" />
           </div>
         </div>
       </div>
 
-      <div class="small-container" style={{ maxWidth: `550px` }}>
-        <div class="space-around" style={{ textAlign: `center` }}>
+      <div className="small-container" style={{ maxWidth: `550px` }}>
+        <div className="space-around" style={{ textAlign: `center` }}>
           <p>
-            "We believe that we can live in a world where every product or
+            &quot;We believe that we can live in a world where every product or
             service has an easy to use experience on all platforms. And our
-            mission is to make it happen."
+            mission is to make it happen.&quot;
           </p>
           <p style={{ fontWeight: `bold` }}>Tomislav Grubisic</p>
           <small>CEO</small>
@@ -220,14 +221,14 @@ const AboutPage = ({ data }) => {
       </div>
 
       <div>
-        <div class="small-container">
-          <div class="large-text bold-text">Not Just Some Pretty Faces</div>
+        <div className="small-container">
+          <div className="large-text bold-text">Not Just Some Pretty Faces</div>
           <hr />
         </div>
-        <div class="big-screen">
+        <div className="big-screen">
           <AuthorsSlider />
         </div>
-        <div class="small-screen">
+        <div className="small-screen">
           <AuthorsSliderMobile />
         </div>
       </div>

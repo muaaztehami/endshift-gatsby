@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import { Link } from "gatsby"
 
@@ -13,38 +14,38 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blogs" />
-      <div class="small-container top-container">
-        <div class="space-around">
-          <small class="small-text">BLOGS</small>
-          <h1 class="extra-larg-text bold-text">Newsworthy Client Wins</h1>
-          <div class="large-text">
-            From our clients' growth stories, acquisitions, and Emmy nominations
-            - it all lives here
+      <div className="small-container top-container">
+        <div className="space-around">
+          <small className="small-text">BLOGS</small>
+          <h1 className="extra-larg-text bold-text">Newsworthy Client Wins</h1>
+          <div className="large-text">
+            From our clients&apos; growth stories, acquisitions, and Emmy
+            nominations - it all lives here
           </div>
         </div>
       </div>
 
       <div
-        class="mid-scroll-btn scroll-margin-l"
+        className="mid-scroll-btn scroll-margin-l"
         style={{
           marginBottom: `20px`,
         }}
       >
         <button
           type="button"
-          class="btn btn-light btn-align"
+          className="btn btn-light btn-align"
           onClick={scrollDown}
         >
           Scroll down
         </button>
       </div>
 
-      <div class="small-container big-screen" style={{ marginTop: `0` }}>
-        <div class="flex-container">
+      <div className="small-container big-screen" style={{ marginTop: `0` }}>
+        <div className="flex-container">
           {data.allMarkdownRemark.edges.map(post => (
-            <div key={post.node.id} class="blog-card">
+            <div key={post.node.id} className="blog-card">
               <Link to={post.node.fields.slug} class="link-style">
-                <div class="blog-card-image">
+                <div className="blog-card-image">
                   <Img
                     fluid={
                       post.node.frontmatter.cover_image.childImageSharp.fluid
@@ -53,7 +54,7 @@ const BlogPage = ({ data }) => {
                     style={{ maxWidth: `100%`, maxHeight: `100%` }}
                   />
                 </div>
-                <p class="bold-text" style={{ margin: `0` }}>
+                <p className="bold-text" style={{ margin: `0` }}>
                   {post.node.frontmatter.title}
                 </p>
                 <small>
@@ -65,24 +66,24 @@ const BlogPage = ({ data }) => {
         </div>
       </div>
 
-      <div class="small-container small-screen">
-        <div class="">
+      <div className="small-container small-screen">
+        <div className="">
           {data.allMarkdownRemark.edges.map(post => (
-            <div key={post.node.id} class="space-around">
+            <div key={post.node.id} className="space-around">
               <Link to={post.node.fields.slug} class="link-style">
                 <small>
                   {dispplayDate(new Date(post.node.frontmatter.date))}
                 </small>
-                <p class="bold-text large-text" style={{ margin: `0` }}>
+                <p className="bold-text large-text" style={{ margin: `0` }}>
                   {post.node.frontmatter.title}
                 </p>
                 <hr />
                 <div style={{ width: `90%`, marginLeft: `10%` }}>
                   <div
-                    class="description"
+                    className="description"
                     dangerouslySetInnerHTML={{ __html: post.node.html }}
                   />
-                  <button type="button" class="btn btn-light btn-align">
+                  <button type="button" className="btn btn-light btn-align">
                     Learn more
                   </button>
                 </div>
