@@ -31,7 +31,7 @@ const BlogsSliderMobile = () => {
         {data.allMarkdownRemark.edges.map((blogs, index) => (
           <Link
             to={blogs.node.fields.slug}
-            class="link-style"
+            className="link-style"
             key={blogs.node.id}
           >
             <div className="flex-container space-around">

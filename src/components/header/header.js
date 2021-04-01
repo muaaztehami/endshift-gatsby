@@ -10,6 +10,9 @@ const Header = ({ siteTitle }) => {
   headerRef.current = headerBackground
 
   useEffect(() => {
+    if (window.location.pathname == "/case_study/") {
+      setHeaderBackground("white-header")
+    }
     const handleScroll = () => {
       const show = window.scrollY > 30
       if (headerRef.current != "dark-header") {
@@ -17,6 +20,9 @@ const Header = ({ siteTitle }) => {
           setHeaderBackground("solid-header")
         } else {
           setHeaderBackground("transparent-header")
+          if (window.location.pathname == "/case_study/") {
+            setHeaderBackground("white-header")
+          }
         }
       }
     }

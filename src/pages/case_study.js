@@ -7,6 +7,7 @@ import { graphql } from "gatsby"
 import "../styles/case_study.scss"
 import MainSlider from "../components/slider/mainSlider"
 import scrollDown from "../utils/scrollDown"
+import BackgroundImage from "gatsby-background-image"
 
 const CaseStudyPage = ({ data }) => {
   const sources_big_picture = [
@@ -34,33 +35,48 @@ const CaseStudyPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="container">
-        <Img
-          fluid={sources_background_image}
-          alt="slide-1"
-          style={{ width: `100%`, height: `100%`, opacity: `0.5` }}
-        />
-        <div className="centered">
-          <div className="space-around">
-            <small className="small-text">MOBILE APPLICATION</small>
-            <h1 className="extra-larg-text bold-text">Outreach</h1>
-          </div>
-          <div className="space-around">
-            <button type="button" className="btn btn-light btn-align">
-              Launch project
-            </button>
-          </div>
-        </div>
-        <div className="case-study-scroll-btn">
-          <button
-            type="button"
-            className="btn btn-light btn-align"
-            onClick={scrollDown}
+
+      <BackgroundImage
+        Tag="section"
+        style={{ opacity: `1 !important` }}
+        fluid={sources_background_image}
+      >
+        <div style={{ background: `rgb(0, 0, 0, 0.5)` }}>
+          <div
+            className="small-container footer"
+            style={{
+              marginTop: `0`,
+              border: `solid transparent`,
+              paddingTop: `127px`,
+              paddingBottom: "127px",
+            }}
           >
-            Scroll down
-          </button>
+            <div className="space-around">
+              <small className="small-text">MOBILE APPLICATION</small>
+              <h1 className="extra-larg-text bold-text">Outreach</h1>
+            </div>
+            <div className="space-around">
+              <button
+                type="button"
+                className="btn btn-light btn-align"
+                style={{ color: `white` }}
+              >
+                Launch project
+              </button>
+            </div>
+            <div className="case-study-scroll-btn">
+              <button
+                type="button"
+                className="btn btn-light btn-align"
+                onClick={scrollDown}
+                style={{ color: `white` }}
+              >
+                Scroll down
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      </BackgroundImage>
 
       <div className="small-container ">
         <div className="large-text bold-text mdeium-text-box">
@@ -274,13 +290,13 @@ export const data = graphql`
     background_image_desktop: file(relativePath: { eq: "office.jpg" }) {
       childImageSharp {
         fluid(fit: FILL, maxWidth: 1600, maxHeight: 700) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     background_image_mobile: file(relativePath: { eq: "office.jpg" }) {
       childImageSharp {
-        fluid(fit: FILL, maxWidth: 800, maxHeight: 1600) {
+        fluid(fit: FILL, maxWidth: 180, maxHeight: 275) {
           ...GatsbyImageSharpFluid
         }
       }

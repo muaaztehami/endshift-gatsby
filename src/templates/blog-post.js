@@ -39,28 +39,6 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
       </div>
 
-      {/* <div
-        style={{ width: `100%`, height: `400px`, position: `relative` }}
-        class="space-around"
-      >
-        <Img
-          fluid={post.frontmatter.cover_image.childImageSharp.fluid}
-          alt="slide-2"
-          style={{ maxWidth: `100%`, maxHeight: `100%`, opacity: `0.5` }}
-        />
-        <div
-          class="small-container"
-          style={{
-            position: `absolute`,
-            top: `0px`,
-            margin: `0 180px`,
-            padding: `163px 0`,
-          }}
-        >
-          <h1 class="large-text bold-text">{post.frontmatter.title}</h1>
-        </div>
-      </div> */}
-
       <div className="small-container">
         <div className="space-around">
           <article
