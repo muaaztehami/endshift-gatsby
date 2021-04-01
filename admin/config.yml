@@ -1,0 +1,105 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Cover Image', name: 'cover_image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'aboutSlider'
+    label: 'About Slider'
+    folder: 'content/sliders/aboutSlider'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slide Image', name: 'slide_image', widget: 'image' }
+
+  - name: 'authorsSlider'
+    label: 'Authors Slider'
+    folder: 'content/sliders/authorsSlider'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Designation', name: 'designation', widget: 'string' }
+      - { label: 'Slide Image', name: 'slide_image', widget: 'image' }
+
+  - name: 'careersSlider'
+    label: 'Careers Slider'
+    folder: 'content/sliders/careersSlider'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slide Image', name: 'slide_image_1', widget: 'image' }
+      - { label: 'Slide Image', name: 'slide_image_2', widget: 'image' }
+      - { label: 'Slide Image', name: 'slide_image_3', widget: 'image' }
+      - { label: 'Slide Image', name: 'slide_image_4', widget: 'image' }
+
+  - name: 'mainSlider'
+    label: 'Main Slider'
+    folder: 'content/sliders/mainSlider'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slide Image', name: 'slide_image', widget: 'image' }
+
+  - name: 'jobs'
+    label: 'Jobs'
+    folder: 'content/jobs'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Nature', name: 'nature', widget: 'select', options: ["Full-time Position", "Internship"] }
+      - { label: 'Tagline', name: 'tagline', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
